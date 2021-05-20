@@ -1,41 +1,57 @@
 //Nav//
 
-#nav{
-    display: none;
-    @include md { 
-        display: block;
-    }
+#search{
+    
+    width: 100%;
+    
 
-    >div{
-        display:flex;
-        margin-left:auto;
 
-        ul{
-            width:100%;
-            list-style: none;
-            display: grid;
-            
-            grid-template-columns: repeat(7 1fr);
-            grid-template-areas:" logo logo logo whoweare season how tickets" ;
-            align-items: end;
-            #logo{
-                grid-area: logo;
-                
-            }
-            #how{
-                grid-area: how;
+    >div {
+        display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". header .";
+        grid-area: header;
+        display: flex;
+        border: 1px solid red;
+        width: 100%;
+        // justify-content: space-between;
 
-            }
-            #whoweare{
-                grid-area: whoweare;
-            }
-            #season{
-                grid-area: season;
-
-            }
-            #tickets{ 
-                grid-area: tickets;
+        aside {
+            display:block;
+            @include md {
+                display: none;
             }
         }
+
+        section {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+
+            button {
+                margin-left: 20px;
+            }
+
+            #burger {
+                display: block;
+
+                @include md {
+                    display: none;
+                }
+            }
+
+            #mg {
+                display: none;
+
+                @include md {
+                    display: block;
+                }
+            }
+
+            
+        }
+
+
     }
+
 }

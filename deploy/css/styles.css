@@ -10,59 +10,70 @@ html {
 /* =============
     Variables
 ============= */
+body {
+  margin: 0;
+  padding: 0;
+}
+body header {
+  margin: 0;
+  padding: 0;
+}
+body ul {
+  margin: 0;
+  padding: 0;
+}
+body ul li {
+  list-style: none;
+}
+body ul h1, body ul h2, body ul h3, body ul h4, body ul h5, body ul h6 {
+  margin: 0;
+  padding: 0;
+}
+body ul p {
+  margin: 0;
+  padding: 0;
+}
+
 header {
-  display: grid;
-  grid-template-columns: 16px auto 16px;
-  grid-template-areas: ". header .";
-}
-header > div {
-  grid-area: header;
-  display: flex;
-  border: 1px solid red;
-  width: 100%;
-}
-header > div aside {
-  display: block;
-}
-@media (min-width: 768px) {
-  header > div aside {
-    display: none;
-  }
-}
-header > div section {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-}
-header > div section button {
-  margin-left: 20px;
-}
-header > div section #burger {
-  display: block;
-}
-@media (min-width: 768px) {
-  header > div section #burger {
-    display: none;
-  }
-}
-header > div section #mg {
   display: none;
 }
 @media (min-width: 768px) {
-  header > div section #mg {
+  header {
     display: block;
   }
 }
-header > div section #logo {
-  display: block;
+header > div {
+  display: flex;
+  margin-left: auto;
 }
-@media (min-width: 768px) {
-  header > div section #logo {
-    display: none;
-  }
+header > div ul {
+  width: 100%;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(8 1fr);
+  grid-template-areas: " logo logo logo whoweare season how tickets burger";
+  align-items: end;
+}
+header > div ul #logo {
+  grid-area: logo;
+}
+header > div ul #how {
+  grid-area: how;
+}
+header > div ul #whoweare {
+  grid-area: whoweare;
+}
+header > div ul #season {
+  grid-area: season;
+}
+header > div ul #tickets {
+  grid-area: tickets;
+}
+header > div ul #burger {
+  grid-area: burger;
 }
 
-#hero > div {
+#hero {
   background-size: cover;
   background-position: center;
   background-image: url("../img/images/hero.jpg");
@@ -70,85 +81,79 @@ header > div section #logo {
   width: 100%;
 }
 @media (min-width: 768px) {
-  #hero > div {
+  #hero {
     height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 @media (min-width: 1024px) {
-  #hero > div {
+  #hero {
     height: 423px;
   }
 }
 @media (min-width: 1200px) {
-  #hero > div {
+  #hero {
     height: 595px;
   }
 }
-#hero section #covid {
-  display: grid;
-  grid-template-columns: 24px auto 24px;
-  grid-template-areas: ".hero.";
-  grid-area: hero;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#hero section #covid p {
-  border: orangered solid 1px;
-  height: 219px;
-  width: 80%;
-  text-align: center;
-}
-@media (min-width: 768px) {
-  #hero section #covid p {
-    height: 217px;
-  }
-}
-@media (min-width: 1024px) {
-  #hero section #covid p {
-    height: 250px;
-  }
-}
-@media (min-width: 1200px) {
-  #hero section #covid p {
-    height: 348px;
-  }
-}
-
-#nav {
+#hero > div {
+  background-color: rgba(230, 68, 21, 0.8);
+  color: #fff;
+  padding: 20px;
+  width: 40vw;
   display: none;
 }
 @media (min-width: 768px) {
-  #nav {
-    display: block;
+  #hero > div {
+    display: inline-block;
   }
 }
-#nav > div {
-  display: flex;
-  margin-left: auto;
-}
-#nav > div ul {
+
+#search {
   width: 100%;
-  list-style: none;
+}
+#search > div {
   display: grid;
-  grid-template-columns: repeat(7 1fr);
-  grid-template-areas: " logo logo logo whoweare season how tickets";
-  align-items: end;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". header .";
+  grid-area: header;
+  display: flex;
+  border: 1px solid red;
+  width: 100%;
 }
-#nav > div ul #logo {
-  grid-area: logo;
+#search > div aside {
+  display: block;
 }
-#nav > div ul #how {
-  grid-area: how;
+@media (min-width: 768px) {
+  #search > div aside {
+    display: none;
+  }
 }
-#nav > div ul #whoweare {
-  grid-area: whoweare;
+#search > div section {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
 }
-#nav > div ul #season {
-  grid-area: season;
+#search > div section button {
+  margin-left: 20px;
 }
-#nav > div ul #tickets {
-  grid-area: tickets;
+#search > div section #burger {
+  display: block;
+}
+@media (min-width: 768px) {
+  #search > div section #burger {
+    display: none;
+  }
+}
+#search > div section #mg {
+  display: none;
+}
+@media (min-width: 768px) {
+  #search > div section #mg {
+    display: block;
+  }
 }
 
 #season2021 > div {

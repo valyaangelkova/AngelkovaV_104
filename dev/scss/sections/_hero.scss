@@ -1,63 +1,90 @@
-#hero{
+#hero {
 
-    >div{
-    
     background-size: cover;
-    background-position: center;
-    background-image: url( "../img/images/hero.jpg");
-    height:132px;
-    @include md{
-        height:320px;
-    }
-    @include lg{
-        height:423px;
-    }
-    @include xl{
-        height:595px;
-    }
-    width:100%;
-}
+        background-position: center;
+        background-image: url("../img/images/hero.jpg");
+        height: 132px;
+        width:100%;
+        // margin-top: 0;
+        
+        // align-items: center;
 
 
-   section{
-       div{ 
+        @include md {
+            height: 320px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-   
-   
-}
-      
-   #covid{
-    display: grid;
-    grid-template-columns: 24px auto 24px;
-    grid-template-areas: ".hero.";
-    grid-area: hero;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    p{
-       border:orangered solid 1px;
-       
-    height:219px;
-    @include md{ 
-        height: 217px;
-    }
-    @include lg{ 
-        height: 250px;
-    }
-    @include xl{ 
-        height: 348px;
-    }
-       width: 80%;
-       text-align: center;
-       
-      
+        @include lg {
+            height: 423px;
+        }
 
-    }
-    
-   
-}
+        @include xl {
+            height: 595px;
+        }
 
-}
+        >div {
+            background-color: $aperol-transparent ;
+            color: $white;
+            padding: 20px;
+            width: 40vw;
+            display: none;
+
+            @include md{
+                display: inline-block;
+            }
+            
+
+            
+        }
+
+
+    // section {
+        //        div{ 
+
+
+
+        // }
+
+        // #covid {
+        //     display: grid;
+        //     grid-template-columns: 24px auto 24px;
+        //     grid-template-areas: ".hero.";
+        //     grid-area: hero;
+        //     display: flex;
+        //     justify-content: center;
+        //     align-items: center;
+
+        //     p {
+        //         border: orangered solid 1px;
+
+        //         height: 219px;
+
+        //         @include md {
+        //             height: 217px;
+        //         }
+
+        //         @include lg {
+        //             height: 250px;
+        //         }
+
+        //         @include xl {
+        //             height: 348px;
+        //         }
+
+        //         width: 80%;
+        //         text-align: center;
+
+
+
+        //     }
+
+
+        // }
+
+    // }
 
 
 }
