@@ -1,0 +1,41 @@
+//Nav//
+
+#nav{
+    display: none;
+    @include md { 
+        display: block;
+    }
+
+    >div{
+        display:flex;
+        margin-left:auto;
+
+        ul{
+            width:100%;
+            list-style: none;
+            display: grid;
+            
+            grid-template-columns: repeat(7 1fr);
+            grid-template-areas:" logo logo logo whoweare season how tickets" ;
+            align-items: end;
+            #logo{
+                grid-area: logo;
+                
+            }
+            #how{
+                grid-area: how;
+
+            }
+            #whoweare{
+                grid-area: whoweare;
+            }
+            #season{
+                grid-area: season;
+
+            }
+            #tickets{ 
+                grid-area: tickets;
+            }
+        }
+    }
+}

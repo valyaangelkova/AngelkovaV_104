@@ -1,0 +1,273 @@
+/* =============
+    Mixins
+============= */
+/* ---------------- Font Sizing ---------------- */
+html {
+  font-size: 100%;
+}
+
+/* ---------------- Media Queries ---------------- */
+/* =============
+    Variables
+============= */
+header {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". header .";
+}
+header > div {
+  grid-area: header;
+  display: flex;
+  border: 1px solid red;
+  width: 100%;
+}
+header > div aside {
+  display: block;
+}
+@media (min-width: 768px) {
+  header > div aside {
+    display: none;
+  }
+}
+header > div section {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+header > div section button {
+  margin-left: 20px;
+}
+header > div section #burger {
+  display: block;
+}
+@media (min-width: 768px) {
+  header > div section #burger {
+    display: none;
+  }
+}
+header > div section #mg {
+  display: none;
+}
+@media (min-width: 768px) {
+  header > div section #mg {
+    display: block;
+  }
+}
+header > div section #logo {
+  display: block;
+}
+@media (min-width: 768px) {
+  header > div section #logo {
+    display: none;
+  }
+}
+
+#hero > div {
+  background-size: cover;
+  background-position: center;
+  background-image: url("../img/images/hero.jpg");
+  height: 132px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  #hero > div {
+    height: 320px;
+  }
+}
+@media (min-width: 1024px) {
+  #hero > div {
+    height: 423px;
+  }
+}
+@media (min-width: 1200px) {
+  #hero > div {
+    height: 595px;
+  }
+}
+#hero section #covid {
+  display: grid;
+  grid-template-columns: 24px auto 24px;
+  grid-template-areas: ".hero.";
+  grid-area: hero;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#hero section #covid p {
+  border: orangered solid 1px;
+  height: 219px;
+  width: 80%;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  #hero section #covid p {
+    height: 217px;
+  }
+}
+@media (min-width: 1024px) {
+  #hero section #covid p {
+    height: 250px;
+  }
+}
+@media (min-width: 1200px) {
+  #hero section #covid p {
+    height: 348px;
+  }
+}
+
+#nav {
+  display: none;
+}
+@media (min-width: 768px) {
+  #nav {
+    display: block;
+  }
+}
+#nav > div {
+  display: flex;
+  margin-left: auto;
+}
+#nav > div ul {
+  width: 100%;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(7 1fr);
+  grid-template-areas: " logo logo logo whoweare season how tickets";
+  align-items: end;
+}
+#nav > div ul #logo {
+  grid-area: logo;
+}
+#nav > div ul #how {
+  grid-area: how;
+}
+#nav > div ul #whoweare {
+  grid-area: whoweare;
+}
+#nav > div ul #season {
+  grid-area: season;
+}
+#nav > div ul #tickets {
+  grid-area: tickets;
+}
+
+#season2021 > div {
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". season .";
+}
+#season2021 > div #calendar {
+  display: none;
+}
+@media (min-width: 1024px) {
+  #season2021 > div #calendar {
+    display: block;
+  }
+}
+#season2021 > div #calendar h1 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border: orangered 1px solid;
+}
+#season2021 > div #season input {
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  #season2021 > div #season input {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  #season2021 > div #season {
+    grid-template-columns: repeat(7 1fr);
+    grid-template-areas: " title title p s d v m";
+  }
+}
+#season2021 > div #season h1 {
+  display: flex;
+  margin-right: auto;
+}
+#season2021 > div #season ul {
+  display: none;
+}
+@media (min-width: 768px) {
+  #season2021 > div #season ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(5 1fr);
+    grid-template-areas: "p s d v m";
+  }
+  #season2021 > div #season ul #p {
+    grid-area: p;
+  }
+  #season2021 > div #season ul #s {
+    grid-area: s;
+  }
+  #season2021 > div #season ul #d {
+    grid-area: d;
+  }
+  #season2021 > div #season ul #v {
+    grid-area: v;
+  }
+  #season2021 > div #season ul #m {
+    grid-area: m;
+  }
+}
+
+#whoweare {
+  display: grid;
+  grid-template-columns: 24px auto 24px;
+  grid-template-areas: ". who .";
+}
+@media (min-width: 768px) {
+  #whoweare {
+    grid-template-columns: 91px auto 91px;
+  }
+}
+@media (min-width: 1024px) {
+  #whoweare {
+    grid-template-columns: 242px auto 242px;
+  }
+}
+@media (min-width: 1200px) {
+  #whoweare {
+    grid-template-columns: 292px auto 292px;
+  }
+}
+#whoweare > div {
+  grid-area: who;
+}
+#whoweare h1 {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+#whoweare article {
+  display: grid;
+  grid-template-areas: " pt1 pt1" "pt2 pt2";
+  grid-template-columns: repeat(2 1fr);
+}
+@media (min-width: 1200px) {
+  #whoweare article {
+    grid-template-areas: " pt1 pt2";
+    gap: 40px;
+  }
+}
+#whoweare article #pt1 {
+  grid-area: pt1;
+}
+#whoweare article #pt2 {
+  display: none;
+}
+@media (min-width: 768px) {
+  #whoweare article #pt2 {
+    display: block;
+    grid-area: pt2;
+  }
+}
+#whoweare button {
+  display: flex;
+  margin-left: auto;
+}

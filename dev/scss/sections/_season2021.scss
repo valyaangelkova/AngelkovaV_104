@@ -1,0 +1,89 @@
+// Season 2021//
+
+#season2021{
+    
+
+    >div{
+        display: grid;
+    grid-template-columns: 16px auto 16px;
+    grid-template-areas: ". season .";
+
+
+    #calendar{
+        display: none;
+        @include lg{
+            display: block;
+
+        }
+        h1{
+            display:flex;
+            justify-content: center;
+            align-content: center;
+            border: orangered 1px solid;
+        }
+
+    }
+    #season{
+
+        input{
+            display: flex;
+            justify-content: center;
+
+            @include md{
+                display:none;
+             }
+        }
+        
+        @include md{ 
+            // display: grid;
+
+            // grid-template-columns: repeat(5 1fr);
+            // grid-template-areas: " title title ..."
+            // "p s d v m";
+            
+             }
+             @include lg {
+                grid-template-columns: repeat(7 1fr);
+            grid-template-areas: " title title p s d v m"
+            ;
+
+
+
+        }
+        h1{
+            display:flex;
+            margin-right: auto;
+        }
+        ul{
+            display:none;
+            @include md{
+
+                list-style: none;
+            display: grid;
+
+            grid-template-columns: repeat(5 1fr);
+            grid-template-areas: 
+            "p s d v m";
+            #p{
+                grid-area: p;
+            }
+            #s{
+                grid-area: s;
+            }
+            #d{
+                grid-area: d;
+            }
+            #v{
+                grid-area: v;
+            }
+            #m{
+                grid-area: m;
+            }
+            }
+            
+
+        }
+       
+    }
+    }
+}

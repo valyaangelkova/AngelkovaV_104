@@ -1,0 +1,63 @@
+//Who We Are//
+
+#whoweare{
+    display: grid;
+    grid-template-columns: 24px auto 24px;
+    // grid-template-rows: repeat(3 auto);
+    grid-template-areas:". who .";
+    @include md{
+        grid-template-columns: 91px auto 91px;
+
+    }
+    @include lg{
+        grid-template-columns: 242px auto 242px;
+
+    }
+    @include xl{
+        grid-template-columns: 292px auto 292px;
+
+    }
+    >div{grid-area: who;
+
+    }
+    
+   
+    h1{
+       
+        display: flex;
+        align-content: center;
+justify-content: center;
+    }
+    article{
+
+    display: grid;
+    grid-template-areas: " pt1 pt1"
+    "pt2 pt2";
+    grid-template-columns: repeat(2 1fr);
+    @include xl {
+        grid-template-areas: " pt1 pt2"
+        ;
+        gap: 40px;
+
+    }
+    #pt1{
+        grid-area: pt1;
+
+    }
+#pt2{
+
+    display:none;
+    @include md {
+        display:block;
+        grid-area: pt2;
+
+    }
+}
+}
+button{
+    display: flex;
+    margin-left: auto;
+    
+    
+}
+}
