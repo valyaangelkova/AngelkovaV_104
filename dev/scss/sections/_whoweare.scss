@@ -27,6 +27,23 @@
         display: flex;
         align-content: center;
 justify-content: center;
+margin-top: 80px;
+margin-bottom: 24px;
+@include md{
+
+    margin-top: 98px;
+    margin-bottom: 32px;
+}
+@include lg{
+
+    margin-top: 112px;
+    margin-bottom: 48px;
+}
+@include xl{
+
+    margin-top: 48px;
+    // margin-bottom: 24px;
+}
     }
     article{
 
@@ -40,6 +57,11 @@ justify-content: center;
         gap: 40px;
 
     }
+    color: $aperol;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: rem-calc(21);
+    line-height: 29px;
     #pt1{
         grid-area: pt1;
 
@@ -57,7 +79,12 @@ justify-content: center;
 button{
     display: flex;
     margin-left: auto;
-    
-    
+    color: white;
+    background-color: $aperol;
+    border-radius: 0;
+    border: none;
+    font-family: sans-serif;
+    font-size: rem-calc(19);
+    padding: 10px 22px;
 }
 }

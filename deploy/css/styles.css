@@ -52,6 +52,16 @@ p {
   font-weight: 300;
 }
 
+.orangebutton {
+  color: white;
+  background-color: #E64415;
+  border-radius: 0;
+  border: none;
+  font-family: sans-serif;
+  font-size: 1.1875rem;
+  padding: 10px 22px;
+}
+
 #nav-container ul {
   height: 100%;
 }
@@ -187,7 +197,7 @@ header > div #nav-container {
 }
 
 #search {
-  margin-top: 100px;
+  margin-top: 150px;
   width: 100%;
 }
 #search > div {
@@ -232,10 +242,20 @@ header > div #nav-container {
   }
 }
 
-#season2021 > div {
+#howtogethere {
   display: grid;
-  grid-template-columns: 16px auto 16px;
-  grid-template-areas: ". season .";
+  grid-template-columns: 24px auto 24px;
+  grid-template-areas: ". how .";
+}
+#howtogethere h1 {
+  grid-area: how;
+  font: RobotoCondensed;
+  font-weight: 900;
+  color: #1A171B;
+  text-align: left;
+}
+#howtogethere article {
+  grid-area: how;
 }
 #season2021 > div #calendar {
   display: none;
@@ -246,10 +266,18 @@ header > div #nav-container {
   }
 }
 #season2021 > div #calendar h1 {
+  text-align: center;
+  border: orangered 1px solid;
+}
+#season2021 > div #calendar ul {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-areas: "1 2 3 4 5 6 7 ";
+  grid-template-rows: 5;
+}
+#season2021 > div #calendar ul li {
   display: flex;
   justify-content: center;
-  align-content: center;
-  border: orangered 1px solid;
 }
 #season2021 > div #season h1 {
   display: inline;
@@ -260,15 +288,12 @@ header > div #nav-container {
   font-size: 1.75rem;
 }
 #season2021 > div #season #input {
-  display: inline;
+  display: flex;
 }
 @media (min-width: 768px) {
   #season2021 > div #season #input {
     display: none;
   }
-}
-#season2021 > div #season button {
-  display: inline;
 }
 #season2021 > div #season #psdvm {
   display: none;
@@ -276,46 +301,58 @@ header > div #nav-container {
 @media (min-width: 768px) {
   #season2021 > div #season #psdvm {
     list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+  }
+}
+@media (min-width: 768px) {
+  #season2021 > div #images {
     display: grid;
-    grid-template-columns: repeat(5 1fr);
-    grid-template-areas: "p s d v m";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: " image1 image2 image3 " "bigimg bigimg bigimg";
   }
 }
 @media (min-width: 1024px) {
-  #season2021 > div #season #psdvm {
-    grid-template-columns: repeat(7 1fr);
-    grid-template-areas: " title title p s d v m";
+  #season2021 > div #images {
+    grid-template-areas: " image1 image2 image3 ";
   }
 }
-#season2021 > div #season #psdvm #p {
-  grid-area: p;
+#season2021 > div #images img {
+  width: 100%;
 }
-#season2021 > div #season #psdvm #s {
-  grid-area: s;
+@media (min-width: 768px) {
+  #season2021 > div #images #img1 {
+    grid-area: image1;
+  }
 }
-#season2021 > div #season #psdvm #d {
-  grid-area: d;
-}
-#season2021 > div #season #psdvm #v {
-  grid-area: v;
-}
-#season2021 > div #season #psdvm #m {
-  grid-area: m;
-}
-#season2021 > div #images {
-  display: flex;
-  align-items: center;
-}
-#season2021 > div #images #image2 {
+#season2021 > div #images #img2 {
   display: none;
 }
-#season2021 > div #images #image3 {
+@media (min-width: 768px) {
+  #season2021 > div #images #img2 {
+    display: list-item;
+    grid-area: image2;
+  }
+}
+#season2021 > div #images #img3 {
   display: none;
+}
+@media (min-width: 768px) {
+  #season2021 > div #images #img3 {
+    display: list-item;
+    grid-area: image3;
+  }
 }
 #season2021 > div #images #bigimg {
   display: none;
 }
-
+@media (min-width: 768px) {
+  #season2021 > div #images #bigimg {
+    display: list-item;
+    grid-area: bigimg;
+  }
+}
 #whoweare {
   display: grid;
   grid-template-columns: 24px auto 24px;
@@ -343,11 +380,35 @@ header > div #nav-container {
   display: flex;
   align-content: center;
   justify-content: center;
+  margin-top: 80px;
+  margin-bottom: 24px;
+}
+@media (min-width: 768px) {
+  #whoweare h1 {
+    margin-top: 98px;
+    margin-bottom: 32px;
+  }
+}
+@media (min-width: 1024px) {
+  #whoweare h1 {
+    margin-top: 112px;
+    margin-bottom: 48px;
+  }
+}
+@media (min-width: 1200px) {
+  #whoweare h1 {
+    margin-top: 48px;
+  }
 }
 #whoweare article {
   display: grid;
   grid-template-areas: " pt1 pt1" "pt2 pt2";
   grid-template-columns: repeat(2 1fr);
+  color: #E64415;
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 1.3125rem;
+  line-height: 29px;
 }
 @media (min-width: 1200px) {
   #whoweare article {
@@ -370,4 +431,11 @@ header > div #nav-container {
 #whoweare button {
   display: flex;
   margin-left: auto;
+  color: white;
+  background-color: #E64415;
+  border-radius: 0;
+  border: none;
+  font-family: sans-serif;
+  font-size: 1.1875rem;
+  padding: 10px 22px;
 }

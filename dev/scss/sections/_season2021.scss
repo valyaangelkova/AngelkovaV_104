@@ -1,108 +1,187 @@
 // Season 2021//
 
-#season2021{
-    
+#season2021 {
+    // display: grid;
+    // grid-template-columns: 16px auto 16px;
+    // grid-template-areas: ". season .";
 
-    >div{
-        display: grid;
-    grid-template-columns: 16px auto 16px;
-    grid-template-areas: ". season .";
+    >div {
+    //    grid-area: season;
 
 
-    #calendar{
-        display: none;
-        @include lg{
-            display: block;
-
-        }
-        h1{
-            display:flex;
-            justify-content: center;
-            align-content: center;
-            border: orangered 1px solid;
-        }
-
-    }
-    #season{
-        h1{
-            display: inline;
-            text-align: left;
-            font-family: sans-serif;
-            font-weight: 700;
-            color: red;
-            font-size: rem-calc(28);
-        }
-
-        #input{
-            display: inline;
-            
-
-            @include md{
-                display:none;
-             }
-        }
-        button{
-            display:inline;
-        }
-        #psdvm{
+        #calendar {
             display: none;
-        
-        @include md{ 
-            
 
-                list-style: none;
-            display: grid;
+            @include lg {
+                display: block;
 
-            grid-template-columns: repeat(5 1fr);
-            grid-template-areas: 
-            "p s d v m";
-            
+                // display: grid;
+                // grid-template-columns:repeat(7, 1fr);
+                // grid-template-areas: "1 2 3 4 5 6 7 ";
+                // grid-template-rows: 5
             }
+
+            h1 {
+                text-align: center;
+                border: orangered 1px solid;
+
+            }
+
+            ul {
+                display: grid;
+                grid-template-columns: repeat(7, 1fr);
+                grid-template-areas: "1 2 3 4 5 6 7 ";
+                grid-template-rows: 5;
+
+
+
+
+
+                li {
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+        }
+
+        #season {
+            h1 {
+                display: inline;
+                text-align: left;
+                font-family: sans-serif;
+                font-weight: 700;
+                color: red;
+                font-size: rem-calc(28);
+            }
+
+            #input {
+                display: flex;
+
+                @include md {
+                    display: none;
+                }
+            }
+
+            // button{
+            //     display:inline;
+            // }
+            #psdvm {
+                display: none;
+
+                @include md {
+
+
+                    list-style: none;
+                    display: flex;
+                    justify-content: center;
+                    gap: 35px;
+
+                    // grid-template-columns: repeat(5 1fr);
+                    // grid-template-areas: 
+                    // "p s d v m";
+
+                }
+
+                // display: grid;
+
+                // grid-template-columns: repeat(5 1fr);
+                // grid-template-areas: " title title ..."
+                // "p s d v m";
+
+
+                //  @include lg {
+                //     grid-template-columns: repeat(7 1fr);
+                // grid-template-areas: " title title p s d v m"
+                // ;
+
+                //  }
+                //  #p{
+                //     grid-area: p;
+                // }
+                // #s{
+                //     grid-area: s;
+                // }
+                // #d{
+                //     grid-area: d;
+                // }
+                // #v{
+                //     grid-area: v;
+                // }
+                // #m{
+                //     grid-area: m;
+                // }
+
+            }
+        }
+
+        #images {
             // display: grid;
+            // grid-template-columns: 40px auto 40px;
+            // grid-template-areas: ". img .";
 
-            // grid-template-columns: repeat(5 1fr);
-            // grid-template-areas: " title title ..."
-            // "p s d v m";
-            
-             
-             @include lg {
-                grid-template-columns: repeat(7 1fr);
-            grid-template-areas: " title title p s d v m"
-            ;
+            @include md {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-areas: " image1 image2 image3 "
+                    "bigimg bigimg bigimg";
 
-             }
-             #p{
-                grid-area: p;
-            }
-            #s{
-                grid-area: s;
-            }
-            #d{
-                grid-area: d;
-            }
-            #v{
-                grid-area: v;
-            }
-            #m{
-                grid-area: m;
             }
 
-        }
-    }
-       
-       #images{
-           display: flex;
-           align-items: center;
-           #image2{
-               display: none;
-           }
-           #image3{
-            display: none;
-        }
-        #bigimg{
-            display: none;
-        }
-       }
-    }
+            @include lg {
+                grid-template-areas: " image1 image2 image3 ";
+
+
+            }
+
+            img{
+                width: 100%;
+            }
+
+            #img1 {
+                // grid-area: img;
+                // margin: 0 20px;
     
+
+                @include md {
+                    grid-area: image1;
+                }
+            }
+
+            #img2 {
+                display: none;
+
+                @include md {
+                    display: list-item;
+                    grid-area: image2;
+
+                }
+            }
+
+            #img3 {
+                display: none;
+
+                @include md {
+                    display: list-item;
+                    grid-area: image3;
+
+                }
+            }
+
+            #bigimg {
+                display: none;
+
+                @include md {
+                    display: list-item;
+                    grid-area: bigimg;
+
+                }
+
+                @include lg {
+                    // display: none;
+
+                }
+            }
+        }
+
     }
+}

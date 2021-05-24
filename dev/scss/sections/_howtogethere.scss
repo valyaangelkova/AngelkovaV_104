@@ -1,11 +1,22 @@
 #howtogethere{
+    display: grid;
+    grid-template-columns: 24px auto 24px;
+    grid-template-areas: ". how .";
     h1{
+        grid-area: how;
+        font: Roboto+Condensed;
+        font-weight: 900;
+        color: $onyx;
+        text-align: left;
+
 
     }
     article{
 
+        grid-area: how;
+
     }
     aside{
-        
+       
     }
 }
