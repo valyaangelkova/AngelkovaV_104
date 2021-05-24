@@ -1,44 +1,131 @@
 //Header// 
 
 
-header{
-    display: none;
-    @include md { 
-        display: block;
-    }
+// header{
+//     display: none;
+//     @include md { 
+//         display: block;
+//     }
 
-    >div{
-        display:flex;
-        margin-left:auto;
+//     >div{
+//         display:flex;
+//         margin-left:auto;
 
-        ul{
-            width:100%;
-            list-style: none;
-            display: grid;
+//         ul{
+//             width:100%;
+//             list-style: none;
+//             display: grid;
             
-            grid-template-columns: repeat(8 1fr);
-            grid-template-areas:" logo logo logo whoweare season how tickets burger" ;
-            align-items: end;
-            #logo{
-                grid-area: logo;
+//             grid-template-columns: repeat(8 1fr);
+//             grid-template-areas:" logo logo logo whoweare season how tickets burger" ;
+//             align-items: end;
+//             #logo{
+//                 grid-area: logo;
                 
-            }
-            #how{
-                grid-area: how;
+//             }
+//             #how{
+//                 grid-area: how;
 
-            }
-            #whoweare{
-                grid-area: whoweare;
-            }
-            #season{
-                grid-area: season;
+//             }
+//             #whoweare{
+//                 grid-area: whoweare;
+//             }
+//             #season{
+//                 grid-area: season;
 
+//             }
+//             #tickets{ 
+//                 grid-area: tickets;
+//             }
+//             #burger{
+//                 grid-area: burger
+//             }
+//         }
+//     }
+// }
+header {
+    // height: 93px;
+    // @include md {
+    //     height: 69px;
+    // }
+    // @include lg {
+    //     height: 113px;
+    // }
+    background-color: $white;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 0;
+    margin:16px 0;
+
+
+
+    // @include xl{
+    //     display: grid;
+    //     grid-template-columns: auto 1200 auto;
+    //     grid-template-areas: ". header .";
+    // }
+
+    >div {
+        display: grid;
+        grid-template-areas: 
+        "logo burger"
+        "nav nav";
+        grid-template-columns: 20% auto;
+        // border: 1px solid red;
+
+        @include lg {
+            grid-template-areas: "logo nav";
+            grid-template-columns: 20% auto;
+        }
+
+        // @include xl{
+        //     grid-area: header;
+        // }
+
+        #logo-container {
+            grid-area: logo;
+            padding: 10px;
+            // border: 1px solid green;
+
+           a:link, a:visited {
+                transition: 0.25s;
+
+                &:hover {
+                }
             }
-            #tickets{ 
-                grid-area: tickets;
+
+            
+        }
+
+        #burger-container {
+            align-items: center;
+            display: flex;
+            grid-area: burger;
+            padding: 10px;
+
+            @include lg {
+                display: none !important;
             }
-            #burger{
-                grid-area: burger
+
+            i {
+                margin-left: auto;
+                cursor: pointer;
+                font-size: rem-calc(30);
+            }
+        }
+
+        #nav-container {
+            // border: 1px solid blue;
+            background-color: white;
+            display: none;
+            grid-area: nav;
+            padding: 20px 10px 10px;
+
+            @include lg {
+                background-color: $white;
+                display: block !important;
             }
         }
     }

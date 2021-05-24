@@ -34,84 +34,160 @@ body ul p {
   padding: 0;
 }
 
-header {
-  display: none;
+body {
+  font-family: "Roboto Condensed", sans-serif;
 }
-@media (min-width: 768px) {
-  header {
-    display: block;
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.section-title {
+  font-weight: 300;
+}
+
+#nav-container ul {
+  height: 100%;
+}
+@media (min-width: 1024px) {
+  #nav-container ul {
+    display: flex;
+    justify-content: flex-end;
   }
 }
-header > div {
-  display: flex;
-  margin-left: auto;
+#nav-container ul li {
+  margin-bottom: 20px;
+  text-align: right;
 }
-header > div ul {
+@media (min-width: 1024px) {
+  #nav-container ul li {
+    align-items: center;
+    display: flex;
+    margin-bottom: 0px;
+  }
+}
+#nav-container ul li a:link,
+#nav-container ul li a:visited {
+  padding: 0 20px;
+  text-decoration: none;
+  transition: 0.25s;
+}
+#nav-container ul li:last-child {
+  border: none;
+}
+
+header {
+  background-color: #fff;
+  left: 0;
+  position: fixed;
+  top: 0;
   width: 100%;
-  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+header > div {
   display: grid;
-  grid-template-columns: repeat(8 1fr);
-  grid-template-areas: " logo logo logo whoweare season how tickets burger";
-  align-items: end;
+  grid-template-areas: "logo burger" "nav nav";
+  grid-template-columns: 20% auto;
 }
-header > div ul #logo {
+@media (min-width: 1024px) {
+  header > div {
+    grid-template-areas: "logo nav";
+    grid-template-columns: 20% auto;
+  }
+}
+header > div #logo-container {
   grid-area: logo;
+  padding: 10px;
 }
-header > div ul #how {
-  grid-area: how;
+header > div #logo-container a:link, header > div #logo-container a:visited {
+  transition: 0.25s;
 }
-header > div ul #whoweare {
-  grid-area: whoweare;
-}
-header > div ul #season {
-  grid-area: season;
-}
-header > div ul #tickets {
-  grid-area: tickets;
-}
-header > div ul #burger {
+header > div #burger-container {
+  align-items: center;
+  display: flex;
   grid-area: burger;
+  padding: 10px;
+}
+@media (min-width: 1024px) {
+  header > div #burger-container {
+    display: none !important;
+  }
+}
+header > div #burger-container i {
+  margin-left: auto;
+  cursor: pointer;
+  font-size: 1.875rem;
+}
+header > div #nav-container {
+  background-color: white;
+  display: none;
+  grid-area: nav;
+  padding: 20px 10px 10px;
+}
+@media (min-width: 1024px) {
+  header > div #nav-container {
+    background-color: #fff;
+    display: block !important;
+  }
 }
 
 #hero {
+  height: 100%;
   background-size: cover;
   background-position: center;
   background-image: url("../img/images/hero.jpg");
-  height: 132px;
   width: 100%;
 }
 @media (min-width: 768px) {
   #hero {
-    height: 320px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 }
-@media (min-width: 1024px) {
-  #hero {
-    height: 423px;
-  }
-}
-@media (min-width: 1200px) {
-  #hero {
-    height: 595px;
-  }
-}
 #hero > div {
-  background-color: rgba(230, 68, 21, 0.8);
-  color: #fff;
-  padding: 20px;
-  width: 40vw;
   display: none;
 }
 @media (min-width: 768px) {
   #hero > div {
     display: inline-block;
+    background-color: rgba(230, 68, 21, 0.8);
+    color: #fff;
+    padding: 20px;
+    width: 40vw;
+  }
+}
+#hero p {
+  font-family: Montserrat;
+  font-weight: 900;
+  font-size: 1.5625rem;
+}
+@media (min-width: 1024px) {
+  #hero p {
+    font-size: 1.875rem;
+  }
+}
+#hero #mobile {
+  margin-top: -50px;
+  font-family: Montserrat;
+  font-weight: 900;
+  font-size: 1.5625rem;
+}
+@media (min-width: 768px) {
+  #hero #mobile {
+    display: none;
   }
 }
 
 #search {
+  margin-top: 100px;
   width: 100%;
 }
 #search > div {
@@ -175,50 +251,69 @@ header > div ul #burger {
   align-content: center;
   border: orangered 1px solid;
 }
-#season2021 > div #season input {
-  display: flex;
-  justify-content: center;
+#season2021 > div #season h1 {
+  display: inline;
+  text-align: left;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: red;
+  font-size: 1.75rem;
+}
+#season2021 > div #season #input {
+  display: inline;
 }
 @media (min-width: 768px) {
-  #season2021 > div #season input {
+  #season2021 > div #season #input {
     display: none;
   }
 }
-@media (min-width: 1024px) {
-  #season2021 > div #season {
-    grid-template-columns: repeat(7 1fr);
-    grid-template-areas: " title title p s d v m";
-  }
+#season2021 > div #season button {
+  display: inline;
 }
-#season2021 > div #season h1 {
-  display: flex;
-  margin-right: auto;
-}
-#season2021 > div #season ul {
+#season2021 > div #season #psdvm {
   display: none;
 }
 @media (min-width: 768px) {
-  #season2021 > div #season ul {
+  #season2021 > div #season #psdvm {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(5 1fr);
     grid-template-areas: "p s d v m";
   }
-  #season2021 > div #season ul #p {
-    grid-area: p;
+}
+@media (min-width: 1024px) {
+  #season2021 > div #season #psdvm {
+    grid-template-columns: repeat(7 1fr);
+    grid-template-areas: " title title p s d v m";
   }
-  #season2021 > div #season ul #s {
-    grid-area: s;
-  }
-  #season2021 > div #season ul #d {
-    grid-area: d;
-  }
-  #season2021 > div #season ul #v {
-    grid-area: v;
-  }
-  #season2021 > div #season ul #m {
-    grid-area: m;
-  }
+}
+#season2021 > div #season #psdvm #p {
+  grid-area: p;
+}
+#season2021 > div #season #psdvm #s {
+  grid-area: s;
+}
+#season2021 > div #season #psdvm #d {
+  grid-area: d;
+}
+#season2021 > div #season #psdvm #v {
+  grid-area: v;
+}
+#season2021 > div #season #psdvm #m {
+  grid-area: m;
+}
+#season2021 > div #images {
+  display: flex;
+  align-items: center;
+}
+#season2021 > div #images #image2 {
+  display: none;
+}
+#season2021 > div #images #image3 {
+  display: none;
+}
+#season2021 > div #images #bigimg {
+  display: none;
 }
 
 #whoweare {

@@ -1,0 +1,56 @@
+
+//Navigation//
+
+#nav-container {
+    ul {
+        height: 100%;
+
+        @include lg {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        li {
+            margin-bottom: 20px;
+            // border: 1px solid red;
+            text-align: right;
+
+            @include lg {
+                align-items: center;
+                // border-right: 2px solid ;
+                display: flex;
+                margin-bottom: 0px;
+            }
+
+            a:link,
+            a:visited {
+                // color: $white;
+               
+                padding: 0 20px;
+                text-decoration: none;
+                transition: 0.25s;
+                @include lg {
+                    // color: $black;
+                }
+
+                &:hover,
+                &:active {
+                    // color: $yellow;
+                }
+            }
+        }
+
+        // li:first-child {
+        //     border: none;
+        //     display: none;
+
+        //     @include md{
+        //         display: list-item;
+        //     }
+        // }
+
+        li:last-child {
+            border: none;
+        }
+    }
+}

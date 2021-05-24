@@ -24,39 +24,31 @@
 
     }
     #season{
+        h1{
+            display: inline;
+            text-align: left;
+            font-family: sans-serif;
+            font-weight: 700;
+            color: red;
+            font-size: rem-calc(28);
+        }
 
-        input{
-            display: flex;
-            justify-content: center;
+        #input{
+            display: inline;
+            
 
             @include md{
                 display:none;
              }
         }
+        button{
+            display:inline;
+        }
+        #psdvm{
+            display: none;
         
         @include md{ 
-            // display: grid;
-
-            // grid-template-columns: repeat(5 1fr);
-            // grid-template-areas: " title title ..."
-            // "p s d v m";
             
-             }
-             @include lg {
-                grid-template-columns: repeat(7 1fr);
-            grid-template-areas: " title title p s d v m"
-            ;
-
-
-
-        }
-        h1{
-            display:flex;
-            margin-right: auto;
-        }
-        ul{
-            display:none;
-            @include md{
 
                 list-style: none;
             display: grid;
@@ -64,7 +56,22 @@
             grid-template-columns: repeat(5 1fr);
             grid-template-areas: 
             "p s d v m";
-            #p{
+            
+            }
+            // display: grid;
+
+            // grid-template-columns: repeat(5 1fr);
+            // grid-template-areas: " title title ..."
+            // "p s d v m";
+            
+             
+             @include lg {
+                grid-template-columns: repeat(7 1fr);
+            grid-template-areas: " title title p s d v m"
+            ;
+
+             }
+             #p{
                 grid-area: p;
             }
             #s{
@@ -79,11 +86,23 @@
             #m{
                 grid-area: m;
             }
-            }
-            
 
         }
+    }
        
+       #images{
+           display: flex;
+           align-items: center;
+           #image2{
+               display: none;
+           }
+           #image3{
+            display: none;
+        }
+        #bigimg{
+            display: none;
+        }
+       }
     }
+    
     }
-}
