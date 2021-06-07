@@ -1,0 +1,30 @@
+footer{
+    background-color: $header;
+    
+    >div{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       
+    }
+    aside{
+       position: cover;
+      
+
+    }
+    article{ 
+       
+
+    
+    ul{
+        display: flex;
+        gap: 10px;
+      
+    }
+    p{
+        font-family: Montserrat, sans-serif;
+        font-weight: 200;
+        font-size: rem-calc(16);
+    }
+}
+}

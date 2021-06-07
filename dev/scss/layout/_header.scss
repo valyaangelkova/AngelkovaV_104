@@ -1,63 +1,27 @@
 //Header// 
 
-
-// header{
-//     display: none;
-//     @include md { 
-//         display: block;
-//     }
-
-//     >div{
-//         display:flex;
-//         margin-left:auto;
-
-//         ul{
-//             width:100%;
-//             list-style: none;
-//             display: grid;
-            
-//             grid-template-columns: repeat(8 1fr);
-//             grid-template-areas:" logo logo logo whoweare season how tickets burger" ;
-//             align-items: end;
-//             #logo{
-//                 grid-area: logo;
-                
-//             }
-//             #how{
-//                 grid-area: how;
-
-//             }
-//             #whoweare{
-//                 grid-area: whoweare;
-//             }
-//             #season{
-//                 grid-area: season;
-
-//             }
-//             #tickets{ 
-//                 grid-area: tickets;
-//             }
-//             #burger{
-//                 grid-area: burger
-//             }
-//         }
-//     }
-// }
 header {
-    // height: 93px;
-    // @include md {
-    //     height: 69px;
-    // }
-    // @include lg {
-    //     height: 113px;
-    // }
+    height: 95px;
+    @include md {
+        height: 126px;
+    }
+    @include lg {
+        height: 175px;
+    }
+    @include xl {
+        height: 187px;
+    }
+
     background-color: $white;
     left: 0;
     position: fixed;
     top: 0;
     width: 100%;
     padding: 0;
-    margin:16px 0;
+    margin:16px 0 0;
+    // height: 96px;
+    
+    
 
 
 
@@ -86,11 +50,12 @@ header {
 
         #logo-container {
             grid-area: logo;
-            padding: 10px;
-            // border: 1px solid green;
+            // padding: 10px;
+            
 
            a:link, a:visited {
                 transition: 0.25s;
+                cursor: pointer;
 
                 &:hover {
                 }
@@ -117,15 +82,23 @@ header {
         }
 
         #nav-container {
-            // border: 1px solid blue;
-            background-color: white;
+            // height:80px;
+           
+            border: 1px solid blue;
+            // background-color: white;
             display: none;
             grid-area: nav;
-            padding: 20px 10px 10px;
+            // padding: 20px 10px 0px;
+        
 
             @include lg {
-                background-color: $white;
+                // background-color: $white;
                 display: block !important;
+                align-content: flex-end;
+              
+                
+                
+                
             }
         }
     }

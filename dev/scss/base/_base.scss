@@ -22,4 +22,13 @@ ul {
 		padding: 0;
 	}
 }
+.title{
+	font-family: sans-serif;
+	font-weight: 700;
+	font-size: rem-calc(30);
+	@include md{
+		font-size: rem-calc(35);
+
+	}
+}
 }
