@@ -1,5 +1,5 @@
 #hero {
-height: 100vh;
+height: 70vh;
     background-size: cover;
         background-position: center;
         background-image: url("../img/images/hero.jpg");
@@ -11,14 +11,14 @@ height: 100vh;
 
 
         @include md {
-            // height: 320px;
+            height: 80vh;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
         @include lg {
-            // height: 423px;
+            height: 100vh;
         }
 
         @include xl {
@@ -33,6 +33,7 @@ height: 100vh;
                 color: $white;
                 padding: 20px;
                 width: 40vw;
+                text-align: center;
             }
 
             // background-color: $aperol-transparent ;
@@ -55,16 +56,24 @@ height: 100vh;
 
             }
         }
-        #mobile{
-            margin-top: -50px;
-            font-family: Montserrat;
-            font-weight: 900;
-            font-size: rem-calc(25);
-            @include md{
-              display: none;
+    //     #mobile{
+    //         display: flex;
+    //         justify-items: center;
+           
+    //         margin-top: 100px;
+            
+    //         font-family: Montserrat;
+    //         font-weight: 900;
+    //         font-size: rem-calc(25);
+    //         background-color: $aperol-transparent ;
+    //             color: $white;
+    //             padding: 20px;
+    //             width: 40vw;
+    //         @include md{
+    //           display: none;
 
-        }
-    }
+    //     }
+    // }
 }
 
     // section {

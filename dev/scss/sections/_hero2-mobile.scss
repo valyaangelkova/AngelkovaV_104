@@ -1,0 +1,39 @@
+#hero2{
+    // border: solid red;
+    // display: grid;
+    // grid-template-columns: 24px auto 24px;
+    // grid-template-areas: ". text .";
+    div{
+        // border: solid red;
+        // grid-area: text;;
+      display: flex;
+      justify-content: center;
+        background-color: $aperol-transparent;
+        color: white;
+        padding: 20px;
+        width: 272px;
+        margin-top: -150px;
+        
+       
+       
+            
+            @include md{
+                display: none;
+              
+            }
+
+         
+           
+
+           
+            p{
+                font-family: Montserrat;
+                font-weight: 900;
+                font-size: rem-calc(25);
+             
+            }
+
+            
+        }
+       
+    }
