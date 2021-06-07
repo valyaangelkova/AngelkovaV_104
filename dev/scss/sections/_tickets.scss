@@ -4,14 +4,34 @@
     background-color: $onyx;
 
     h1{
+        color: $aperol;
+        padding:24px;
 
     }
 
     article{
+        display: none;
+        @include md{
+            display:block;
+            color: white;
+        font-family: Montserrat, sans-serif ;
+        font-weight: 300;
+        font-size: rem-calc(19);
+        }
+        @include lg{
+            
+            font-size: rem-calc(28);
+
+        }
+        
 
     }
     aside{
+       
+        margin-bottom: 40px;
+        text-align: center;
         ul{
+           
             gap: 28px;
             button{
                 border: 3px solid $aperol;
@@ -26,9 +46,17 @@
                 
             }
         }
+        @include md{
+            display:none;
+
+        }
 
     }
     section{
+        display: none;
+        @include md{ 
+            display: block;
+        }
 
     }
 }

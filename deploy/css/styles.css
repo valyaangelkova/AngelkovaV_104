@@ -321,6 +321,21 @@ footer article p {
 #howtogethere article {
   grid-area: how;
 }
+#partners {
+  margin: 88px 0 32px 24px;
+}
+@media (min-width: 768px) {
+  #partners {
+    margin: 128px 0 56px 80px;
+  }
+}
+#partners h1 {
+  margin-bottom: 40px;
+}
+#partners ul #main {
+  display: flex;
+  justify-content: center;
+}
 #partners ul #main img {
   width: 235px;
   height: 100px;
@@ -457,6 +472,31 @@ footer article p {
 #tickets {
   background-color: #1A171B;
 }
+#tickets h1 {
+  color: #E64415;
+  padding: 24px;
+}
+#tickets article {
+  display: none;
+}
+@media (min-width: 768px) {
+  #tickets article {
+    display: block;
+    color: white;
+    font-family: Montserrat, sans-serif;
+    font-weight: 300;
+    font-size: 1.1875rem;
+  }
+}
+@media (min-width: 1024px) {
+  #tickets article {
+    font-size: 1.75rem;
+  }
+}
+#tickets aside {
+  margin-bottom: 40px;
+  text-align: center;
+}
 #tickets aside ul {
   gap: 28px;
 }
@@ -471,6 +511,20 @@ footer article p {
   width: 170px;
   margin: 14px 0;
 }
+@media (min-width: 768px) {
+  #tickets aside {
+    display: none;
+  }
+}
+#tickets section {
+  display: none;
+}
+@media (min-width: 768px) {
+  #tickets section {
+    display: block;
+  }
+}
+
 #whoweare {
   display: grid;
   grid-template-columns: 24px auto 24px;

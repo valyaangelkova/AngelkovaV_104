@@ -1,5 +1,15 @@
 // Partners//
 #partners{
+    margin: 88px 0 32px 24px;
+    @include md {
+        margin: 128px 0 56px 80px;
+
+    }
+
+   
+    h1{
+        margin-bottom: 40px;
+    }
     ul{
         li{
 
@@ -9,11 +19,13 @@
     }
        
         #main{
+            display: flex;
+            justify-content: center;
             img{
                 width: 235px;
                 height:100px;
            
-               
+              
             }
             @include md{ 
                 display: none;
