@@ -1,0 +1,49 @@
+// Partners//
+#partners{
+    ul{
+        li{
+
+       
+       
+
+    }
+       
+        #main{
+            img{
+                width: 235px;
+                height:100px;
+           
+               
+            }
+            @include md{ 
+                display: none;
+            }
+
+        }
+        .main-2{
+
+            display:none;
+            @include md{
+                display: inline;
+
+            }
+           
+
+        }
+        .logos{
+            display:none;
+            @include lg{
+                display:inline;
+
+            }
+        }
+        #fixsize{
+            img{
+
+         width: 235px;
+             height:100px;
+         }
+
+         }
+    }
+}

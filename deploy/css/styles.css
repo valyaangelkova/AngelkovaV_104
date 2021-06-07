@@ -321,6 +321,36 @@ footer article p {
 #howtogethere article {
   grid-area: how;
 }
+#partners ul #main img {
+  width: 235px;
+  height: 100px;
+}
+@media (min-width: 768px) {
+  #partners ul #main {
+    display: none;
+  }
+}
+#partners ul .main-2 {
+  display: none;
+}
+@media (min-width: 768px) {
+  #partners ul .main-2 {
+    display: inline;
+  }
+}
+#partners ul .logos {
+  display: none;
+}
+@media (min-width: 1024px) {
+  #partners ul .logos {
+    display: inline;
+  }
+}
+#partners ul #fixsize img {
+  width: 235px;
+  height: 100px;
+}
+
 #season2021 > div #calendar {
   background-color: #1A171B;
   color: white;
