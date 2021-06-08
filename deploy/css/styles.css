@@ -315,6 +315,7 @@ footer article div a:visited:active {
   background-size: cover;
   background-position: center;
   background-image: url("../img/images/hero.jpg");
+  height: 132px;
   width: 100%;
 }
 @media (min-width: 768px) {
@@ -365,7 +366,7 @@ footer article div a:visited:active {
   color: white;
   padding: 20px;
   width: 272px;
-  margin-top: -150px;
+  margin-top: -80px;
 }
 @media (min-width: 768px) {
   #hero2 div {
@@ -418,10 +419,17 @@ footer article div a:visited:active {
   font-weight: 200;
   font-size: 20px;
   background-color: #D8D8D8;
+}
+#search > div section button:hover {
+  color: #E64415;
   cursor: pointer;
 }
 #search > div section #fr {
   border-right: 1px solid #1A171B;
+  cursor: pointer;
+}
+#search > div section #fr button:hover {
+  color: #E64415;
   cursor: pointer;
 }
 #search > div section #mg {
@@ -432,6 +440,10 @@ footer article div a:visited:active {
     cursor: pointer;
     display: block;
     color: #1A171B;
+  }
+  #search > div section #mg button:hover {
+    color: #E64415;
+    cursor: pointer;
   }
 }
 
@@ -575,6 +587,12 @@ footer article div a:visited:active {
     background-color: transparent;
     border-radius: 6px;
     height: 35px;
+    width: 109px;
+    cursor: pointer;
+  }
+  #season2021 > div #season #psdvm button:hover {
+    background-color: #E64415;
+    color: white;
   }
 }
 @media (min-width: 768px) {
@@ -666,9 +684,13 @@ footer article div a:visited:active {
   height: 54px;
   width: 170px;
   margin: 14px 0;
+  cursor: pointer;
+}
+#tickets aside ul button:hover {
+  background-color: #E64415;
 }
 @media (min-width: 768px) {
-  #tickets aside {
+  #tickets {
     display: none;
   }
 }
@@ -682,6 +704,7 @@ footer article div a:visited:active {
 }
 
 #whoweare {
+  margin-bottom: 80px;
   display: grid;
   grid-template-columns: 24px auto 24px;
   grid-template-areas: ". who .";
@@ -689,16 +712,19 @@ footer article div a:visited:active {
 @media (min-width: 768px) {
   #whoweare {
     grid-template-columns: 91px auto 91px;
+    margin-bottom: 98px;
   }
 }
 @media (min-width: 1024px) {
   #whoweare {
     grid-template-columns: 242px auto 242px;
+    margin-bottom: 112px;
   }
 }
 @media (min-width: 1200px) {
   #whoweare {
     grid-template-columns: 292px auto 292px;
+    margin-bottom: 128px;
   }
 }
 #whoweare > div {
@@ -745,9 +771,13 @@ footer article div a:visited:active {
   }
 }
 #whoweare article #pt1 {
+  text-align: justify;
+  text-justify: inter-word;
   grid-area: pt1;
 }
 #whoweare article #pt2 {
+  text-align: justify;
+  text-justify: inter-word;
   display: none;
 }
 @media (min-width: 768px) {
@@ -759,6 +789,7 @@ footer article div a:visited:active {
 #whoweare button {
   display: flex;
   margin-left: auto;
+  margin-top: 12px;
   color: white;
   background-color: #E64415;
   border-radius: 0;
@@ -766,4 +797,9 @@ footer article div a:visited:active {
   font-family: sans-serif;
   font-size: 1.1875rem;
   padding: 10px 22px;
+}
+@media (min-width: 768px) {
+  #whoweare button {
+    margin-top: 32px;
+  }
 }

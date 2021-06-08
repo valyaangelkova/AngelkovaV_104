@@ -46,12 +46,22 @@
                 font-weight: 200;
                 font-size: 20px;
                 background-color: $header;
-                cursor: pointer;
+                
 
+            }
+            button:hover {
+                        
+                color: $aperol;
+                cursor: pointer;
             }
             #fr{
                 border-right: 1px solid $onyx;
                 cursor: pointer;
+                button:hover {
+                        
+                    color: $aperol;
+                    cursor: pointer;
+                }
 
                
             }
@@ -73,6 +83,11 @@
                     
                     display: block;
                     color: $onyx;
+                    button:hover {
+                        
+                        color: $aperol;
+                        cursor: pointer;
+                    }
                     
                     }
         

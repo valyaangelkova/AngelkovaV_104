@@ -43,6 +43,16 @@
                 height: 54px;
                 width: 170px;
                 margin:14px 0;
+                cursor: pointer;
+                
+                    
+
+                    
+                }
+                button:hover {
+                        
+                    background-color: $aperol;
+                }
                 
             }
         }
@@ -51,7 +61,7 @@
 
         }
 
-    }
+    
     section{
         display: none;
         @include md{ 

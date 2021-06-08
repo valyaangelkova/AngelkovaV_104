@@ -161,7 +161,13 @@
                         background-color: transparent;
                         border-radius: 6px;
                         height: 35px;
+                        width: 109px;
+                        cursor: pointer;
                         
+                    }
+                    button:hover{
+                        background-color: $aperol;
+                        color:white;
                     }
 
                     // grid-template-columns: repeat(5 1fr);
