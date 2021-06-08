@@ -70,6 +70,7 @@ p {
   font-family: sans-serif;
   font-size: 1.1875rem;
   padding: 10px 22px;
+  cursor: pointer;
 }
 
 .clalendar-button {
@@ -82,6 +83,7 @@ p {
   font-family: sans-serif;
   font-size: 2.1875rem;
   font-weight: 900;
+  cursor: pointer;
 }
 
 .clalendar-button1 {
@@ -94,6 +96,7 @@ p {
   font-family: sans-serif;
   font-size: 2.1875rem;
   font-weight: 900;
+  cursor: pointer;
 }
 
 #nav-container {
@@ -210,24 +213,101 @@ header > div #nav-container {
 }
 
 footer {
+  padding: 0 8px;
   background-color: #D8D8D8;
+}
+@media (min-width: 768px) {
+  footer {
+    padding: 0 24px;
+  }
+}
+@media (min-width: 1024px) {
+  footer {
+    padding: 0 40px;
+  }
+}
+@media (min-width: 1200px) {
+  footer {
+    padding: 0 56px;
+  }
 }
 footer > div {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
-footer aside {
-  position: cover;
+footer aside img {
+  margin-top: 12px;
+  width: 164px;
+}
+@media (min-width: 768px) {
+  footer aside img {
+    width: 260px;
+  }
+}
+@media (min-width: 768px) {
+  footer aside img {
+    width: 309px;
+    margin-top: 26px;
+  }
 }
 footer article ul {
   display: flex;
   gap: 10px;
+  margin-bottom: 20px;
 }
-footer article p {
+footer article ul li {
+  margin-top: 12px;
+}
+@media (min-width: 768px) {
+  footer article ul li {
+    margin-top: 26px;
+  }
+}
+footer article ul li a:link,
+footer article ul li a:visited {
+  color: #1A171B;
+  font-size: 1.5625rem;
+}
+footer article ul li a:link:hover, footer article ul li a:link:active,
+footer article ul li a:visited:hover,
+footer article ul li a:visited:active {
+  color: #E64415;
+}
+footer article div p {
   font-family: Montserrat, sans-serif;
   font-weight: 200;
   font-size: 1rem;
+  margin: 5px 0;
+}
+footer article div address {
+  margin-top: 10px;
+  margin-bottom: 12px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 200;
+  font-size: 1rem;
+  font-style: normal;
+}
+@media (min-width: 768px) {
+  footer article div address {
+    margin-top: 32px;
+    margin-bottom: 37px;
+  }
+}
+@media (min-width: 1024px) {
+  footer article div address {
+    margin-bottom: 33px;
+  }
+}
+footer article div a:link,
+footer article div a:visited {
+  color: #1A171B;
+  font-size: 1rem;
+  text-decoration: none;
+}
+footer article div a:link:hover, footer article div a:link:active,
+footer article div a:visited:hover,
+footer article div a:visited:active {
+  color: #E64415;
 }
 
 #hero {
@@ -445,6 +525,34 @@ footer article p {
 }
 #season2021 > div #season #input {
   display: flex;
+  align-items: center;
+}
+#season2021 > div #season #input input {
+  border-radius: 4px;
+  height: 30px;
+  border: 3px solid #E64415;
+}
+#season2021 > div #season #input input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #E64415;
+  /* Firefox */
+  opacity: 1;
+}
+#season2021 > div #season #input input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #E64415;
+}
+#season2021 > div #season #input input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #E64415;
+}
+#season2021 > div #season #input button {
+  background-color: transparent;
+  color: #E64415;
+  border: none;
+  font-size: 2.625rem;
+  margin-left: -10;
+  padding-left: 0;
 }
 @media (min-width: 768px) {
   #season2021 > div #season #input {

@@ -1,17 +1,44 @@
 footer{
+    padding: 0 8px;
+    @include md{
+        padding: 0 24px;
+
+    }
+    @include lg{
+        padding: 0 40px;
+
+    }
+    @include xl{
+        padding: 0 56px;
+
+    }
     background-color: $header;
     
     >div{
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        // align-items: center;
        
     }
     aside{
-       position: cover;
+        
+    img{
+        margin-top: 12px;
+        
+        width: 164px;
+        @include md {
+            width: 260px;
+        }
+        @include md {
+            width: 309px;
+            margin-top: 26px;
+
+        }
+    }
+    }
       
 
-    }
+    
     article{ 
        
 
@@ -19,12 +46,65 @@ footer{
     ul{
         display: flex;
         gap: 10px;
+        margin-bottom: 20px;
+        li{
+            margin-top: 12px;
+            @include md  {
+                margin-top: 26px;
+
+            }
+            // font-size: rem-calc(25);
+            a:link,
+                    a:visited {
+                        color: $onyx;
+                        font-size: rem-calc(25);
+
+                        &:hover,
+                        &:active {
+                            color: $aperol;
+                        }
+                    }
+        }
       
     }
-    p{
-        font-family: Montserrat, sans-serif;
-        font-weight: 200;
-        font-size: rem-calc(16);
+    div{
+        p{
+            font-family: Montserrat, sans-serif;
+            font-weight: 200;
+            font-size: rem-calc(16);
+            margin: 5px 0;
+        }
+        address{
+            margin-top: 10px;
+            margin-bottom: 12px;
+            @include md {
+
+            
+            margin-top: 32px;
+            margin-bottom: 37px;
+
+        }
+        @include lg{
+            margin-bottom: 33px;
+        }
+            font-family: Montserrat, sans-serif;
+            font-weight: 200;
+            font-size: rem-calc(16);
+            font-style: normal;
+
+        }
+        a:link,
+                    a:visited {
+                        color: $onyx;
+                        font-size: rem-calc(16);
+                        text-decoration: none;
+
+                        &:hover,
+                        &:active {
+                            color: $aperol;
+                        }
+                    }
     }
+    
 }
 }

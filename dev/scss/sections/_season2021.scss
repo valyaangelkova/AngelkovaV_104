@@ -103,10 +103,43 @@
 
             #input {
                 display: flex;
+                align-items: center;
+                input{
+
+                
+                border-radius: 4px;
+                height: 30px;
+                border: 3px solid $aperol;
+                &::placeholder {
+                    /* Chrome, Firefox, Opera, Safari 10.1+ */
+                    color: $aperol;
+                    /* Firefox */
+                    opacity: 1;
+                }
+
+                &:-ms-input-placeholder {
+                    /* Internet Explorer 10-11 */
+                    color: $aperol;
+                }
+
+                &::-ms-input-placeholder {
+                    /* Microsoft Edge */
+                    color: $aperol;
+                }
+            }
+            button{
+                background-color: transparent;
+                color: $aperol;
+                border:none;
+                font-size: rem-calc(42);
+                margin-left: -10;
+                padding-left: 0;
+            }
 
                 @include md {
                     display: none;
                 }
+
             }
 
             // button{
