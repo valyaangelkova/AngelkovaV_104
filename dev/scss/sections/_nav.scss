@@ -2,8 +2,17 @@
 
 #search{
     background-color: $header;
-    margin-top: 96px;
+    margin-top: 100px;
     width: 100%;
+    @include md{
+        margin-top: 126px;
+    }
+    @include lg{
+        margin-top: 175px;
+    }
+    @include xl{
+        margin-top: 187px;
+    }
     
 
 
@@ -33,15 +42,18 @@
                 // margin-left: 20px;
                 border:none;
                 color: $onyx;
-                font-family: Montserrat, sans-serif;
+                font-family: 'Montserrat', sans-serif;
                 font-weight: 200;
                 font-size: 20px;
                 background-color: $header;
-               
+                cursor: pointer;
 
             }
             #fr{
                 border-right: 1px solid $onyx;
+                cursor: pointer;
+
+               
             }
 
             // #burger {
@@ -55,10 +67,15 @@
             #mg {
                 display: none;
 
+
                 @include md {
+                    cursor: pointer;
                     
                     display: block;
                     color: $onyx;
+                    
+                    }
+        
                 }
             }
 
@@ -68,4 +85,3 @@
 
     }
 
-}

@@ -96,6 +96,9 @@ p {
   font-weight: 900;
 }
 
+#nav-container ul {
+  height: 100%;
+}
 @media (min-width: 1024px) {
   #nav-container ul {
     display: flex;
@@ -117,25 +120,30 @@ p {
 #nav-container ul li a:visited {
   color: #1A171B;
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 18;
-  border-bottom: 4px solid #E64415;
-  margin: 0 20px;
+  font-size: 1.125rem;
+  padding: 0 10px;
   text-decoration: none;
   transition: 0.25s;
+  border-bottom: 4px solid #E64415;
+  margin: 0 10px;
+}
+#nav-container ul li a:link:hover, #nav-container ul li a:link:active,
+#nav-container ul li a:visited:hover,
+#nav-container ul li a:visited:active {
+  color: white;
+  background-color: #E64415;
 }
 #nav-container ul li:last-child {
   border: none;
 }
 
 header {
-  height: 95px;
   background-color: #fff;
   left: 0;
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 0;
-  margin: 16px 0 0;
+  height: 95px;
 }
 @media (min-width: 768px) {
   header {
@@ -165,10 +173,11 @@ header > div {
 }
 header > div #logo-container {
   grid-area: logo;
+  padding: 10px;
+  cursor: pointer;
 }
 header > div #logo-container a:link, header > div #logo-container a:visited {
   transition: 0.25s;
-  cursor: pointer;
 }
 header > div #burger-container {
   align-items: center;
@@ -187,14 +196,13 @@ header > div #burger-container i {
   font-size: 1.875rem;
 }
 header > div #nav-container {
-  border: 1px solid blue;
   display: none;
   grid-area: nav;
+  padding: 20px 10px 10px;
 }
 @media (min-width: 1024px) {
   header > div #nav-container {
     display: block !important;
-    align-content: flex-end;
   }
 }
 
@@ -285,8 +293,23 @@ footer article p {
 
 #search {
   background-color: #D8D8D8;
-  margin-top: 96px;
+  margin-top: 100px;
   width: 100%;
+}
+@media (min-width: 768px) {
+  #search {
+    margin-top: 126px;
+  }
+}
+@media (min-width: 1024px) {
+  #search {
+    margin-top: 175px;
+  }
+}
+@media (min-width: 1200px) {
+  #search {
+    margin-top: 187px;
+  }
 }
 #search > div {
   display: grid;
@@ -304,19 +327,22 @@ footer article p {
 #search > div section button {
   border: none;
   color: #1A171B;
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 200;
   font-size: 20px;
   background-color: #D8D8D8;
+  cursor: pointer;
 }
 #search > div section #fr {
   border-right: 1px solid #1A171B;
+  cursor: pointer;
 }
 #search > div section #mg {
   display: none;
 }
 @media (min-width: 768px) {
   #search > div section #mg {
+    cursor: pointer;
     display: block;
     color: #1A171B;
   }

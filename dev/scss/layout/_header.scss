@@ -1,6 +1,115 @@
 //Header// 
 
+// header {
+//     height: 95px;
+//     @include md {
+//         height: 126px;
+//     }
+//     @include lg {
+//         height: 175px;
+//     }
+//     @include xl {
+//         height: 187px;
+//     }
+
+//     background-color: $white;
+//     left: 0;
+//     position: fixed;
+//     top: 0;
+//     width: 100%;
+//     padding: 0;
+//     margin:16px 0 0;
+//     // height: 96px;
+    
+    
+
+
+
+//     // @include xl{
+//     //     display: grid;
+//     //     grid-template-columns: auto 1200 auto;
+//     //     grid-template-areas: ". header .";
+//     // }
+
+//     >div {
+//         display: grid;
+//         grid-template-areas: 
+//         "logo burger"
+//         "nav nav";
+//         grid-template-columns: 20% auto;
+//         // border: 1px solid red;
+
+//         @include lg {
+//             grid-template-areas: "logo nav";
+//             grid-template-columns: 20% auto;
+//         }
+
+//         // @include xl{
+//         //     grid-area: header;
+//         // }
+
+//         #logo-container {
+//             grid-area: logo;
+//             // padding: 10px;
+            
+
+//            a:link, a:visited {
+//                 transition: 0.25s;
+//                 cursor: pointer;
+
+//                 &:hover {
+//                 }
+//             }
+
+            
+//         }
+
+//         #burger-container {
+//             align-items: center;
+//             display: flex;
+//             grid-area: burger;
+//             padding: 10px;
+
+//             @include lg {
+//                 display: none !important;
+//             }
+
+//             i {
+//                 margin-left: auto;
+//                 cursor: pointer;
+//                 font-size: rem-calc(30);
+//             }
+//         }
+
+//         #nav-container {
+//             // height:80px;
+           
+//             border: 1px solid blue;
+//             // background-color: white;
+//             display: none;
+//             grid-area: nav;
+//             // padding: 20px 10px 0px;
+        
+
+//             @include lg {
+//                 // background-color: $white;
+//                 display: block !important;
+//                 align-content: flex-end;
+              
+                
+                
+                
+//             }
+//         }
+//     }
+// }
+
 header {
+    background-color: $white;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
     height: 95px;
     @include md {
         height: 126px;
@@ -11,18 +120,6 @@ header {
     @include xl {
         height: 187px;
     }
-
-    background-color: $white;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 0;
-    margin:16px 0 0;
-    // height: 96px;
-    
-    
-
 
 
     // @include xl{
@@ -50,12 +147,12 @@ header {
 
         #logo-container {
             grid-area: logo;
-            // padding: 10px;
-            
+            padding: 10px;
+            cursor: pointer;
+            // border: 1px solid green;
 
            a:link, a:visited {
                 transition: 0.25s;
-                cursor: pointer;
 
                 &:hover {
                 }
@@ -82,23 +179,15 @@ header {
         }
 
         #nav-container {
-            // height:80px;
-           
-            border: 1px solid blue;
+            // border: 1px solid blue;
             // background-color: white;
             display: none;
             grid-area: nav;
-            // padding: 20px 10px 0px;
-        
+            padding: 20px 10px 10px;
 
             @include lg {
-                // background-color: $white;
+                // background-color: white;
                 display: block !important;
-                align-content: flex-end;
-              
-                
-                
-                
             }
         }
     }
