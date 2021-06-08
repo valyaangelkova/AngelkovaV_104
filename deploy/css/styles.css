@@ -320,7 +320,7 @@ footer article div a:visited:active {
 }
 @media (min-width: 768px) {
   #hero {
-    height: 30vh;
+    height: 320px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -328,7 +328,12 @@ footer article div a:visited:active {
 }
 @media (min-width: 1024px) {
   #hero {
-    height: 100vh;
+    height: 423px;
+  }
+}
+@media (min-width: 1200px) {
+  #hero {
+    height: 595px;
   }
 }
 #hero > div {
@@ -337,13 +342,25 @@ footer article div a:visited:active {
 @media (min-width: 768px) {
   #hero > div {
     display: inline-block;
+    text-align: justify;
+    text-justify: inter-word;
     background-color: rgba(230, 68, 21, 0.8);
     color: #fff;
     padding: 20px;
     width: 558px;
-    text-align: center;
-    text-justify: distribute;
     line-height: 41px;
+    padding: 20px 76px;
+  }
+}
+@media (min-width: 1024px) {
+  #hero > div {
+    width: 710px;
+    padding: 64px 48px;
+  }
+}
+@media (min-width: 1200px) {
+  #hero > div {
+    padding: 98px 170px;
   }
 }
 #hero p {
@@ -461,7 +478,19 @@ footer article div a:visited:active {
 }
 #howtogethere article {
   grid-area: how;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 200;
 }
+@media (min-width: 768px) {
+  #howtogethere article {
+    font-size: 1.25rem;
+  }
+}
+#howtogethere aside {
+  cursor: pointer;
+}
+
 #partners {
   margin: 88px 0 32px 24px;
 }
@@ -512,28 +541,72 @@ footer article div a:visited:active {
   color: white;
   display: none;
 }
+#season2021 > div #calendar button:hover {
+  background-color: #E64415;
+  color: #1A171B;
+}
 @media (min-width: 1024px) {
   #season2021 > div #calendar {
-    display: grid;
+    display: block;
+    padding: 32px 190px;
   }
 }
 #season2021 > div #calendar h1 {
   text-align: center;
-  border: orangered 1px solid;
   font-family: sans-serif;
   font-size: 3.75rem;
   font-weight: 700;
+  margin-bottom: 72px;
 }
-#season2021 > div #calendar ul {
+#season2021 > div #calendar .calendar-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  grid-template-areas: "1 2 3 4 5 6 7 " "1 2 3 4 5 6 7 " "1 2 3 4 5 6 7 " "1 2 3 4 5 6 7 " "1 2 3 4 5 6 7 ";
-  grid-template-rows: 5;
+  justify-items: center;
+  row-gap: 28px;
+  column-gap: 35px;
+}
+@media (min-width: 1200px) {
+  #season2021 > div #calendar .calendar-grid {
+    row-gap: 35px;
+    column-gap: 42px;
+  }
+}
+#season2021 > div #calendar .weekdays {
+  display: grid;
+  row-gap: 28px;
+  column-gap: 35px;
+  grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-style: 200;
+  font-size: 1.875rem;
+  color: white;
+  margin-bottom: 28px;
+}
+#season2021 > div #season {
+  background-color: #1A171B;
+}
+@media (min-width: 1024px) {
+  #season2021 > div #season {
+    background-color: white;
+  }
 }
 #season2021 > div #season h1 {
   display: inline;
   text-align: left;
-  font-family: sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+  color: white;
+}
+@media (min-width: 1024px) {
+  #season2021 > div #season h1 {
+    color: #1A171B;
+  }
+}
+@media (min-width: 1024px) {
+  #season2021 > div #season #title_ {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 #season2021 > div #season #input {
   display: flex;
@@ -561,10 +634,14 @@ footer article div a:visited:active {
 #season2021 > div #season #input button {
   background-color: transparent;
   color: #E64415;
-  border: none;
-  font-size: 2.625rem;
-  margin-left: -10;
+  border: 3px solid #E64415;
+  font-size: 1.875rem;
+  margin-left: -31px;
   padding-left: 0;
+  height: 38px;
+  border-radius: 4px;
+  text-align: center;
+  border-right: none;
 }
 @media (min-width: 768px) {
   #season2021 > div #season #input {
@@ -594,6 +671,11 @@ footer article div a:visited:active {
     background-color: #E64415;
     color: white;
   }
+}
+#season2021 > div #images #img1 {
+  background-image: url("../img/images/image4.jpg");
+  background-position: center;
+  background-size: cover;
 }
 @media (min-width: 768px) {
   #season2021 > div #images {

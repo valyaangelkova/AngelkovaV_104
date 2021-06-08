@@ -10,95 +10,142 @@
 
 
         #calendar {
+
+           button:hover{
+               background-color: $aperol;
+               color: $onyx;
+           }
             background-color: $onyx;
             color: white;
             display: none;
 
             @include lg {
-                // display: block;
+                display: block;
+                padding: 32px 190px ;
 
-                display: grid;
-                // grid-template-columns:repeat(7, 1fr);
-                // grid-template-areas: "1 2 3 4 5 6 7 ";
-                // grid-template-rows: 5
+            //     display: grid;
+            //     // grid-template-columns:repeat(7, 1fr);
+            //     // grid-template-areas: "1 2 3 4 5 6 7 ";
+            //     // grid-template-rows: 5
             }
 
             h1 {
                 text-align: center;
-                border: orangered 1px solid;
+                // border: orangered 1px solid;
                 font-family: sans-serif;
                 font-size: rem-calc(60);
                 font-weight:700;
+                margin-bottom: 72px;
 
             }
+            .calendar-grid
+{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+  row-gap: 28px;
+  column-gap: 35px;
+  @include xl{
+    row-gap: 35px;
+    column-gap: 42px;
 
-            ul {
+  }
+}
+
+.weekdays{
+  display: grid;
+  row-gap: 28px;
+  column-gap: 35px;
+  grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-style: 200;
+  font-size: rem-calc(30);
+  color: white;
+  margin-bottom: 28px;
+}
+
+            // ul {
                 
-                display: grid;
-                grid-template-columns: repeat(7, 1fr);
-                grid-template-areas: "1 2 3 4 5 6 7 "
-                "1 2 3 4 5 6 7 "
-                "1 2 3 4 5 6 7 "
-                "1 2 3 4 5 6 7 "
-                "1 2 3 4 5 6 7 ";
+            //     display: grid;
+            //     grid-template-columns: repeat(7, 1fr);
+            //     grid-template-areas: "1 2 3 4 5 6 7 "
+            //     "1 2 3 4 5 6 7 "
+            //     "1 2 3 4 5 6 7 "
+            //     "1 2 3 4 5 6 7 "
+            //     "1 2 3 4 5 6 7 ";
                 
-                grid-template-rows: 5;
-                // h6{
-                //     font-family: Montserrat, sans-serif;
-                //     font-weight: 300;
-                //     font-size: rem-calc(20)
+            //     grid-template-rows: 5;
+            //     // h6{
+            //     //     font-family: Montserrat, sans-serif;
+            //     //     font-weight: 300;
+            //     //     font-size: rem-calc(20)
                     
-                // }
-                // #monday{
-                //     grid-area:1;
+            //     // }
+            //     // #monday{
+            //     //     grid-area:1;
     
-                // }
-                // #tuesday{
-                //     grid-area:2;
+            //     // }
+            //     // #tuesday{
+            //     //     grid-area:2;
                     
-                // }
-                // #wednesday{
-                //     grid-area:3;
+            //     // }
+            //     // #wednesday{
+            //     //     grid-area:3;
                     
-                // }
-                // #thursday{
-                //     grid-area:4;
+            //     // }
+            //     // #thursday{
+            //     //     grid-area:4;
                     
-                // }
-                // #friday{
-                //     grid-area:5;
+            //     // }
+            //     // #friday{
+            //     //     grid-area:5;
                     
-                // }
-                // #saturday{
-                //     grid-area:6;
+            //     // }
+            //     // #saturday{
+            //     //     grid-area:6;
                     
-                // }
-                // #sunday{
-                //     grid-area:7;
+            //     // }
+            //     // #sunday{
+            //     //     grid-area:7;
                     
-                // }
+            //     // }
 
 
 
 
 
 
-                // li {
-                //     display: flex;
-                //     justify-content: center;
-                // }
-            }
+            //     // li {
+            //     //     display: flex;
+            //     //     justify-content: center;
+            //     // }
+            // }
             
         }
 
         #season {
+            background-color: $onyx;
+            @include lg{
+                background-color: white;
+            }
             h1 {
                 display: inline;
                 text-align: left;
-                font-family: sans-serif;
+                font-family: 'Roboto Condensed', sans-serif;
                 // font-weight: 700;
-                // color: red;
+                color: white;
+                @include lg {
+                    color: $onyx;
+                }
                 // font-size: rem-calc(28);
+            }
+            #title_{
+                @include lg{
+                    display: flex;
+                    justify-content: space-between;
+                }
+
             }
 
             #input {
@@ -130,10 +177,14 @@
             button{
                 background-color: transparent;
                 color: $aperol;
-                border:none;
-                font-size: rem-calc(42);
-                margin-left: -10;
+                border:3px solid $aperol;
+                font-size: rem-calc(30);
+                margin-left: -31px;
                 padding-left: 0;
+                height: 38px;
+                border-radius: 4px;
+                text-align: center;
+                border-right: none;
             }
 
                 @include md {
@@ -209,6 +260,12 @@
         }
 
         #images {
+            #img1{
+                background-image: url("../img/images/image4.jpg");
+                background-position: center;
+                background-size: cover;
+
+            }
             // display: grid;
             // grid-template-columns: 40px auto 40px;
             // grid-template-areas: ". img .";

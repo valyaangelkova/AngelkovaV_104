@@ -11,35 +11,47 @@ height: 70vh;
 
 
         @include md {
-            height: 30vh;
+            height: 320px;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
         @include lg {
-            height: 100vh;
+            height: 423px;
         }
 
         @include xl {
-            // height: 595px;
+            height: 595px;
         }
 
         >div {
             display: none;
             @include md{
                 display: inline-block;
+                text-align: justify;
+                text-justify: inter-word;
                 background-color: $aperol-transparent ;
                 color: $white;
                 padding: 20px;
                 width: 558px;
                 // height: 250px;
-                text-align: center;
-               text-justify: distribute;
+                
+              
                line-height: 41px;
+               padding: 20px 76px;
                 
             }
             @include lg {
+                width: 710px;
+                padding: 64px 48px;
+
+
+            }
+            @include xl {
+                // width: 895px;
+                padding: 98px 170px;
+
 
             }
 
