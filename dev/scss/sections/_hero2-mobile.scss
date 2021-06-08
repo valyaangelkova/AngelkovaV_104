@@ -1,13 +1,15 @@
 #hero2{
+    display: flex;
+    justify-content: center;
     // border: solid red;
     // display: grid;
     // grid-template-columns: 24px auto 24px;
+    
     // grid-template-areas: ". text .";
     div{
         // border: solid red;
         // grid-area: text;;
-      display: flex;
-      justify-content: center;
+     
         background-color: $aperol-transparent;
         color: white;
         padding: 20px;
@@ -27,7 +29,7 @@
 
            
             p{
-                font-family: Montserrat;
+                font-family: 'Montserrat', sans-serif;
                 font-weight: 900;
                 font-size: rem-calc(25);
              
