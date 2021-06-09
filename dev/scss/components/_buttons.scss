@@ -8,6 +8,9 @@
     font-size: rem-calc(19);
     padding: 10px 22px;
     cursor: pointer;
+    button:hover{
+        color: $onyx;
+    }
 }
 .clalendar-button{
     height: 60px;

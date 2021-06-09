@@ -10,12 +10,13 @@
     }
 
     article{
+       
         display: none;
         @include md{
             display:block;
             color: white;
         font-family: Montserrat, sans-serif ;
-        font-weight: 300;
+        font-weight: 200;
         font-size: rem-calc(19);
         }
         @include lg{
@@ -24,6 +25,11 @@
 
         }
         
+        @include xl{
+            
+            line-height: 52px;
+
+        }
 
     }
     aside{
@@ -64,10 +70,58 @@
 
     
     section{
-        display: none;
-        @include md{ 
-            display: block;
+        p{
+
+        
+        font-family: 'Montserrat', sans-serif;
+        font-size: rem-calc(16);
+        font-weight: 200;
+        @include lg{
+            font-size: rem-calc(19);
+        
+
         }
+        @include xl{
+            font-size: rem-calc(20);
+        
+
+        }
+    }
+    h1{
+        font-family: 'Roboto condensed', sans-serif;
+        font-size: rem-calc(25);
+        font-weight: 900;
 
     }
-}
+        display: none;
+        @include md{ 
+            display: grid;
+            background-color: white;
+           grid-template-columns: 50% auto;
+           grid-template-areas: "t1 t1"
+           "t2 t3"
+           "t4 t4";
+
+        }
+        @include lg{
+            grid-template-areas: "t1 t2"
+           "t1 t3"
+           "t4 t4";
+
+        }
+       #discount{
+           grid-area: t1;
+
+           }
+           #member{
+            grid-area: t2;
+           }
+           #group{
+            grid-area: t3;
+           }
+           #exhibitions{
+            grid-area: t4;
+           }
+       }
+
+    }

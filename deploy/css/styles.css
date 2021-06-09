@@ -72,6 +72,9 @@ p {
   padding: 10px 22px;
   cursor: pointer;
 }
+.orangebutton button:hover {
+  color: #1A171B;
+}
 
 .clalendar-button {
   height: 60px;
@@ -862,13 +865,18 @@ footer article div a:visited:active {
     display: block;
     color: white;
     font-family: Montserrat, sans-serif;
-    font-weight: 300;
+    font-weight: 200;
     font-size: 1.1875rem;
   }
 }
 @media (min-width: 1024px) {
   #tickets article {
     font-size: 1.75rem;
+  }
+}
+@media (min-width: 1200px) {
+  #tickets article {
+    line-height: 52px;
   }
 }
 #tickets aside {
@@ -901,10 +909,50 @@ footer article div a:visited:active {
 #tickets section {
   display: none;
 }
+#tickets section p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 200;
+}
+@media (min-width: 1024px) {
+  #tickets section p {
+    font-size: 1.1875rem;
+  }
+}
+@media (min-width: 1200px) {
+  #tickets section p {
+    font-size: 1.25rem;
+  }
+}
+#tickets section h1 {
+  font-family: "Roboto condensed", sans-serif;
+  font-size: 1.5625rem;
+  font-weight: 900;
+}
 @media (min-width: 768px) {
   #tickets section {
-    display: block;
+    display: grid;
+    background-color: white;
+    grid-template-columns: 50% auto;
+    grid-template-areas: "t1 t1" "t2 t3" "t4 t4";
   }
+}
+@media (min-width: 1024px) {
+  #tickets section {
+    grid-template-areas: "t1 t2" "t1 t3" "t4 t4";
+  }
+}
+#tickets section #discount {
+  grid-area: t1;
+}
+#tickets section #member {
+  grid-area: t2;
+}
+#tickets section #group {
+  grid-area: t3;
+}
+#tickets section #exhibitions {
+  grid-area: t4;
 }
 
 #whoweare {
