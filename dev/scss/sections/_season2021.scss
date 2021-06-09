@@ -136,20 +136,22 @@
             #button{
                 display: flex;
                 justify-content: center;
+                padding: 28px 94px;
             }
             h1 {
-                display: inline;
+                padding:32px 24px;
+                display: inline-block;
                 text-align: left;
                 font-family: 'Roboto Condensed', sans-serif;
                 // margin: 32px 20px;
                 // font-weight: 700;
                 color: white;
                 @include md {
-                    // margin: 32px 80px
+                    padding: 32px 80px
                 }
                 @include lg {
                     color: $onyx;
-                    // margin:56px 42px;
+                    padding:56px 42px;
                 }
                 // font-size: rem-calc(28);
             }
@@ -164,6 +166,8 @@
             #input {
                 display: flex;
                 align-items: center;
+                justify-content: center;
+                padding: 28px 56px 0;
                 input{
 
                 
@@ -213,6 +217,10 @@
                 display: none;
 
                 @include md {
+                    padding:0 42px 32px;
+                    @include lg{
+                        padding:56px ;
+                    }
 
 
                     list-style: none;
@@ -405,7 +413,7 @@ grid-template-areas: " a1 image1 a2";
                     background-position: center;
                     background-size: cover;
                     width: 100%;
-                    height: 258px;
+                    // height: 258px;
 
                 }
 

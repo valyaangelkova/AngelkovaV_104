@@ -31,10 +31,48 @@
 //     }
 // }
 #howtogethere{
+  margin:80px 0px;
+  @include md {
+    margin:98px 0px;
+
+  }
+  @include lg {
+    margin:112px 40px;
+
+  }
+  @include xl {
+    margin:128px 26px;
+
+  }
     h1{
-      
+      margin:0 24px;
+      margin-bottom: 28px;
+      @include md {
+        margin: 0 80px;
+        margin-bottom: 32px;
+      }
+      @include lg {
+        margin: 0 40px;
+        margin-bottom: 48px;
+      }
+      @include xl {
+        margin: 0 250px;
+        margin-bottom: 48px;
+      }
     }
     article{
+      div{
+        margin:0 24px;
+      @include md {
+        margin: 0 80px;
+      }
+      @include lg {
+        margin: 0 40px;
+      }
+      // @include xl {
+        
+      // margin: 0 0 0 250px;}
+      }
         // grid-area: how;
                 font-family: 'Montserrat', sans-serif;
                 font-size: rem-calc(14);
@@ -67,6 +105,7 @@
             "p5 p6 map map";
         }
       #p1{
+        
         grid-area:p1;
       }
       #p2{
@@ -94,6 +133,7 @@
             display: block;
         object-fit: cover;
         width: 100%;
+        margin: 0;
         }
       }
     }

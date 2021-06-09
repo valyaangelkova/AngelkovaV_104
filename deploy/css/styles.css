@@ -105,6 +105,11 @@ p {
 #nav-container {
   margin: 0;
 }
+@media (min-width: 1200px) {
+  #nav-container {
+    margin-right: 147px;
+  }
+}
 #nav-container ul {
   height: 100%;
 }
@@ -153,6 +158,7 @@ header {
   top: 0;
   width: 100%;
   height: 76px;
+  margin: 0 147px;
 }
 @media (min-width: 768px) {
   header {
@@ -162,11 +168,13 @@ header {
 @media (min-width: 1024px) {
   header {
     height: 175px;
+    margin: 0 44px 0 16px;
   }
 }
 @media (min-width: 1200px) {
   header {
     height: 187px;
+    margin: 0 16px;
   }
 }
 header > div {
@@ -255,6 +263,7 @@ footer aside img {
 }
 footer article ul {
   display: flex;
+  justify-content: flex-end;
   gap: 10px;
   margin-bottom: 20px;
 }
@@ -467,6 +476,46 @@ footer article div a:visited:active {
   }
 }
 
+#howtogethere {
+  margin: 80px 0px;
+}
+@media (min-width: 768px) {
+  #howtogethere {
+    margin: 98px 0px;
+  }
+}
+@media (min-width: 1024px) {
+  #howtogethere {
+    margin: 112px 40px;
+  }
+}
+@media (min-width: 1200px) {
+  #howtogethere {
+    margin: 128px 26px;
+  }
+}
+#howtogethere h1 {
+  margin: 0 24px;
+  margin-bottom: 28px;
+}
+@media (min-width: 768px) {
+  #howtogethere h1 {
+    margin: 0 80px;
+    margin-bottom: 32px;
+  }
+}
+@media (min-width: 1024px) {
+  #howtogethere h1 {
+    margin: 0 40px;
+    margin-bottom: 48px;
+  }
+}
+@media (min-width: 1200px) {
+  #howtogethere h1 {
+    margin: 0 250px;
+    margin-bottom: 48px;
+  }
+}
 #howtogethere article {
   font-family: "Montserrat", sans-serif;
   font-size: 0.875rem;
@@ -475,6 +524,19 @@ footer article div a:visited:active {
   grid-template-columns: 50% auto;
   grid-template-areas: " map  map" " p1 p1 " " p2 p2 " " p3 p4 " " p5 p5 " " p6 .";
   gap: 20px;
+}
+#howtogethere article div {
+  margin: 0 24px;
+}
+@media (min-width: 768px) {
+  #howtogethere article div {
+    margin: 0 80px;
+  }
+}
+@media (min-width: 1024px) {
+  #howtogethere article div {
+    margin: 0 40px;
+  }
 }
 @media (min-width: 768px) {
   #howtogethere article {
@@ -520,6 +582,7 @@ footer article div a:visited:active {
   display: block;
   object-fit: cover;
   width: 100%;
+  margin: 0;
 }
 
 #partners {
@@ -651,16 +714,24 @@ footer article div a:visited:active {
 #season2021 > div #season #button {
   display: flex;
   justify-content: center;
+  padding: 28px 94px;
 }
 #season2021 > div #season h1 {
-  display: inline;
+  padding: 32px 24px;
+  display: inline-block;
   text-align: left;
   font-family: "Roboto Condensed", sans-serif;
   color: white;
 }
+@media (min-width: 768px) {
+  #season2021 > div #season h1 {
+    padding: 32px 80px;
+  }
+}
 @media (min-width: 1024px) {
   #season2021 > div #season h1 {
     color: #1A171B;
+    padding: 56px 42px;
   }
 }
 @media (min-width: 1024px) {
@@ -672,6 +743,8 @@ footer article div a:visited:active {
 #season2021 > div #season #input {
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 28px 56px 0;
 }
 #season2021 > div #season #input input {
   border-radius: 4px;
@@ -714,11 +787,19 @@ footer article div a:visited:active {
 }
 @media (min-width: 768px) {
   #season2021 > div #season #psdvm {
+    padding: 0 42px 32px;
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 35px;
   }
+}
+@media (min-width: 768px) and (min-width: 1024px) {
+  #season2021 > div #season #psdvm {
+    padding: 56px;
+  }
+}
+@media (min-width: 768px) {
   #season2021 > div #season #psdvm button {
     color: #E64415;
     border: 1px solid #E64415;
@@ -728,6 +809,8 @@ footer article div a:visited:active {
     width: 109px;
     cursor: pointer;
   }
+}
+@media (min-width: 768px) {
   #season2021 > div #season #psdvm button:hover {
     background-color: #E64415;
     color: white;
@@ -847,7 +930,6 @@ footer article div a:visited:active {
     background-position: center;
     background-size: cover;
     width: 100%;
-    height: 258px;
   }
 }
 #tickets {

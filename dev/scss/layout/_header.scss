@@ -113,13 +113,17 @@ header {
     height: 76px;
     @include md {
         height: 126px;
+        
     }
     @include lg {
         height: 175px;
+        margin: 0 44px 0 16px;
     }
     @include xl {
         height: 187px;
+        margin: 0 16px;
     }
+    margin: 0 147px;
 
 
     // @include xl{
@@ -146,6 +150,10 @@ header {
         // }
 
         #logo-container {
+            // @include xl {
+            //     margin-left:147px;
+            //     height: 113px;
+            // }
             grid-area: logo;
             padding: 10px;
             cursor: pointer;
