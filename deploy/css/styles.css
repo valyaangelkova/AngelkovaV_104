@@ -502,6 +502,32 @@ footer article div a:visited:active {
 #partners h1 {
   margin-bottom: 40px;
 }
+#partners ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  #partners ul {
+    display: inline-block;
+  }
+}
+#partners ul .arrows a:link,
+#partners ul .arrows a:visited {
+  color: #E64415;
+  font-size: 1.875rem;
+  text-decoration: none;
+}
+#partners ul .arrows a:link:hover, #partners ul .arrows a:link:active,
+#partners ul .arrows a:visited:hover,
+#partners ul .arrows a:visited:active {
+  color: #1A171B;
+}
+@media (min-width: 768px) {
+  #partners ul .arrows {
+    display: none;
+  }
+}
 #partners ul #main {
   display: flex;
   justify-content: center;
@@ -672,13 +698,19 @@ footer article div a:visited:active {
     color: white;
   }
 }
-#season2021 > div #images #img1 {
-  background-image: url("../img/images/image4.jpg");
-  background-position: center;
-  background-size: cover;
+#season2021 > div #images ul .arrows a:link,
+#season2021 > div #images ul .arrows a:visited {
+  color: #E64415;
+  font-size: 1.875rem;
+  text-decoration: none;
+}
+#season2021 > div #images ul .arrows a:link:hover, #season2021 > div #images ul .arrows a:link:active,
+#season2021 > div #images ul .arrows a:visited:hover,
+#season2021 > div #images ul .arrows a:visited:active {
+  color: white;
 }
 @media (min-width: 768px) {
-  #season2021 > div #images {
+  #season2021 > div #images ul {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: " image1 image2 image3 " "bigimg bigimg bigimg";
@@ -686,25 +718,29 @@ footer article div a:visited:active {
   }
 }
 @media (min-width: 1024px) {
-  #season2021 > div #images {
+  #season2021 > div #images ul {
     grid-template-areas: " image1 image2 image3 ";
   }
 }
-#season2021 > div #images img {
-  width: 100%;
+#season2021 > div #images ul #img1 {
+  background-image: url("../img/images/image4.jpg");
+  background-position: center;
+  background-size: cover;
+  grid-area: img;
 }
 @media (min-width: 768px) {
-  #season2021 > div #images #img1 {
+  #season2021 > div #images ul #img1 {
     grid-area: image1;
   }
 }
-#season2021 > div #images #img2 {
+#season2021 > div #images ul #img2 {
   display: none;
 }
 @media (min-width: 768px) {
-  #season2021 > div #images #img2 {
+  #season2021 > div #images ul #img2 {
     display: list-item;
     grid-area: image2;
+    background-image: url("../img/images/image2.jpg");
   }
 }
 #season2021 > div #images #img3 {

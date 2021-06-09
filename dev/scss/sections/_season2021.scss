@@ -128,15 +128,24 @@
             background-color: $onyx;
             @include lg{
                 background-color: white;
+                
+            }
+            @include xl{
+                
             }
             h1 {
                 display: inline;
                 text-align: left;
                 font-family: 'Roboto Condensed', sans-serif;
+                // margin: 32px 20px;
                 // font-weight: 700;
                 color: white;
+                @include md {
+                    // margin: 32px 80px
+                }
                 @include lg {
                     color: $onyx;
+                    // margin:56px 42px;
                 }
                 // font-size: rem-calc(28);
             }
@@ -260,12 +269,22 @@
         }
 
         #images {
-            #img1{
-                background-image: url("../img/images/image4.jpg");
-                background-position: center;
-                background-size: cover;
+            ul{
+                .arrows{
+                    a:link,
+                    a:visited {
+                        color: $aperol;
+                        font-size: rem-calc(30);
+                        text-decoration: none;
 
-            }
+                        &:hover,
+                        &:active {
+                            color: white;
+                        }
+                    }
+                }
+            
+            
             // display: grid;
             // grid-template-columns: 40px auto 40px;
             // grid-template-areas: ". img .";
@@ -285,12 +304,12 @@
 
             }
 
-            img{
-                width: 100%;
-            }
 
             #img1 {
-                // grid-area: img;
+                background-image: url("../img/images/image4.jpg");
+                background-position: center;
+                background-size: cover;
+                grid-area: img;
                 // margin: 0 20px;
     
 
@@ -305,6 +324,9 @@
                 @include md {
                     display: list-item;
                     grid-area: image2;
+                    
+                        background-image: url("../img/images/image2.jpg");
+                    }
 
                 }
             }

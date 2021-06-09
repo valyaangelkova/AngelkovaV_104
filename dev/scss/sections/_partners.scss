@@ -11,11 +11,35 @@
         margin-bottom: 40px;
     }
     ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include md{
+            display: inline-block;
+        }
         li{
+            
+          
 
        
        
 
+    }
+    .arrows{
+        a:link,
+        a:visited {
+            color: $aperol;
+            font-size: rem-calc(30);
+            text-decoration: none;
+
+            &:hover,
+            &:active {
+                color: $onyx;
+            }
+        }
+        @include md{
+            display: none;
+        }
     }
        
         #main{
