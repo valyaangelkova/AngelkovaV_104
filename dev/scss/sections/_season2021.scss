@@ -133,6 +133,10 @@
             @include xl{
                 
             }
+            #button{
+                display: flex;
+                justify-content: center;
+            }
             h1 {
                 display: inline;
                 text-align: left;
@@ -270,6 +274,7 @@
 
         #images {
             ul{
+               
                 .arrows{
                     a:link,
                     a:visited {
@@ -282,13 +287,47 @@
                             color: white;
                         }
                     }
+                    display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    @include md{
+                        display: none;
+                    }
+                    @include lg{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        a:link,
+                        a:visited {
+                            color: $aperol;
+                            font-size: rem-calc(30);
+                            text-decoration: none;
+    
+                            &:hover,
+                            &:active {
+                                color: $onyx;
+                            }
+                        }
+
+                        
+                        #a1{
+                            grid-area: a1;
+
+                        }
+                        #a2{
+                            grid-area: a2;
+                        }
+
+                    }
                 }
             
             
             // display: grid;
             // grid-template-columns: 40px auto 40px;
             // grid-template-areas: ". img .";
-
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-areas: " a1 image1 a2";
             @include md {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
@@ -299,33 +338,43 @@
             }
 
             @include lg {
-                grid-template-areas: " image1 image2 image3 ";
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-areas: "a1 image1 image2 image3 a2";
 
 
             }
 
 
             #img1 {
-                background-image: url("../img/images/image4.jpg");
-                background-position: center;
-                background-size: cover;
-                grid-area: img;
+              display: none;
                 // margin: 0 20px;
     
 
                 @include md {
+                    display: block;
                     grid-area: image1;
+                    background-image: url("../img/images/image4.jpg");
+                    background-position: center;
+                    background-size: cover;
+                    
+                    height: 148px;
                 }
             }
 
             #img2 {
-                display: none;
+                background-image: url("../img/images/image2.jpg");
+                background-position: center;
+                background-size: cover;
+                height: 160px;
 
                 @include md {
-                    display: list-item;
+                    
                     grid-area: image2;
                     
-                        background-image: url("../img/images/image2.jpg");
+                        
+                        
+                        height: 148px;
                     }
 
                 }
@@ -337,6 +386,11 @@
                 @include md {
                     display: list-item;
                     grid-area: image3;
+                    background-image: url("../img/images/image3.jpg");
+                        background-position: center;
+                        background-size: cover;
+                        
+                        height: 148px;
 
                 }
             }
@@ -347,6 +401,11 @@
                 @include md {
                     display: list-item;
                     grid-area: bigimg;
+                    background-image: url("../img/images/image1.jpg");
+                    background-position: center;
+                    background-size: cover;
+                    width: 100%;
+                    height: 258px;
 
                 }
 

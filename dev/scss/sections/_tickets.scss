@@ -53,13 +53,14 @@
                         
                     background-color: $aperol;
                 }
+                @include md{
+                    display:none;
+        
+                }
                 
             }
         }
-        @include md{
-            display:none;
-
-        }
+       
 
     
     section{
