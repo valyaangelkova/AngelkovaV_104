@@ -464,31 +464,56 @@ footer article div a:visited:active {
   }
 }
 
-#howtogethere {
-  display: grid;
-  grid-template-columns: 24px auto 24px;
-  grid-template-areas: ". how .";
-}
-#howtogethere h1 {
-  grid-area: how;
-  font: RobotoCondensed;
-  font-weight: 900;
-  color: #1A171B;
-  text-align: left;
-}
 #howtogethere article {
-  grid-area: how;
   font-family: "Montserrat", sans-serif;
   font-size: 0.875rem;
   font-weight: 200;
+  display: grid;
+  grid-template-columns: 50% auto;
+  grid-template-areas: " map  map" " p1 p1 " " p2 p2 " " p3 p4 " " p5 p5 " " p6 .";
+  gap: 20px;
 }
 @media (min-width: 768px) {
   #howtogethere article {
     font-size: 1.25rem;
   }
 }
-#howtogethere aside {
-  cursor: pointer;
+@media (min-width: 768px) {
+  #howtogethere article {
+    grid-template-areas: " p1 p3 " " p2 p4 " "p5 ." "p6 ." "map map";
+  }
+}
+@media (min-width: 1024px) {
+  #howtogethere article {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: " p1 p3  map map" " p2 p4  map map" "p5 p6 map map";
+  }
+}
+#howtogethere article #p1 {
+  grid-area: p1;
+}
+#howtogethere article #p2 {
+  grid-area: p2;
+}
+#howtogethere article #p3 {
+  grid-area: p3;
+}
+#howtogethere article #p4 {
+  grid-area: p4;
+}
+#howtogethere article #p5 {
+  grid-area: p5;
+}
+#howtogethere article button {
+  grid-area: p6;
+}
+#howtogethere article a {
+  grid-area: map;
+}
+#howtogethere article a img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
 }
 
 #partners {

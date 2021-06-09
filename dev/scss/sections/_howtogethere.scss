@@ -1,32 +1,97 @@
-#howtogethere{
-    >div{
+// #howtogethere{
+//     >div{
        
-    }
-    display: grid;
-    grid-template-columns: 24px auto 24px;
-    grid-template-areas: ". how .";
+//     }
+//     display: grid;
+//     grid-template-columns: 24px auto 24px;
+//     grid-template-areas: ". how .";
+//     h1{
+//         grid-area: how;
+//         font: Roboto+Condensed;
+//         font-weight: 900;
+//         color: $onyx;
+//         text-align: left;
+
+
+//     }
+//     article{
+
+//         grid-area: how;
+//         font-family: 'Montserrat', sans-serif;
+//         font-size: rem-calc(14);
+//         font-weight: 200;
+//         @include md {
+//             font-size: rem-calc(20);
+
+//         }
+
+//     }
+//     aside{
+//        cursor: pointer;
+//     }
+// }
+#howtogethere{
     h1{
-        grid-area: how;
-        font: Roboto+Condensed;
-        font-weight: 900;
-        color: $onyx;
-        text-align: left;
-
-
+      
     }
     article{
-
-        grid-area: how;
-        font-family: 'Montserrat', sans-serif;
-        font-size: rem-calc(14);
-        font-weight: 200;
-        @include md {
-            font-size: rem-calc(20);
-
+        // grid-area: how;
+                font-family: 'Montserrat', sans-serif;
+                font-size: rem-calc(14);
+                font-weight: 200;
+                @include md {
+                    font-size: rem-calc(20);
+                }
+        
+      display:grid;
+      grid-template-columns: 50% auto ;
+      grid-template-areas:
+        " map  map"
+        " p1 p1 "
+        " p2 p2 "
+        " p3 p4 "
+        " p5 p5 "
+        " p6 .";
+        gap: 20px;
+        @include md{
+            grid-template-areas: " p1 p3 "
+            " p2 p4 "
+            "p5 ."
+            "p6 ."
+            "map map";
         }
-
+        @include lg{
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas: " p1 p3  map map"
+            " p2 p4  map map"
+            "p5 p6 map map";
+        }
+      #p1{
+        grid-area:p1;
+      }
+      #p2{
+        grid-area:p2;
+      }
+      #p3{
+        grid-area:p3;
+      }
+      #p4{
+        grid-area:p4;
+      }
+      #p5{
+        grid-area:p5;
+      }
+      button{
+        grid-area:p6;
+        
+      }
+      a{
+        grid-area:map;
+        img{
+            display: block;
+        object-fit: cover;
+        width: 100%;
+        }
+      }
     }
-    aside{
-       cursor: pointer;
-    }
-}
+  }
