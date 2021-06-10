@@ -4,6 +4,7 @@
     background-color: $header;
     margin-top: 76px;
     width: 100%;
+   
     @include md{
         margin-top: 126px;
     }
@@ -18,7 +19,7 @@
 
     >div {
         display: grid;
-    grid-template-columns: 16px auto 16px;
+    grid-template-columns: 20px auto 20px;
     grid-template-areas: ". header .";
         grid-area: header;
         display: flex;

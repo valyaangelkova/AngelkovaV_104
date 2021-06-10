@@ -1,127 +1,125 @@
 // Tickets
 
-#tickets{
-    background-color: $onyx;
-
-    h1{
-        color: $aperol;
-        padding:24px;
-
-    }
-
-    article{
-       
-        display: none;
-        @include md{
-            display:block;
-            color: white;
-        font-family: Montserrat, sans-serif ;
-        font-weight: 200;
-        font-size: rem-calc(19);
-        }
-        @include lg{
-            
-            font-size: rem-calc(28);
-
-        }
-        
-        @include xl{
-            
-            line-height: 52px;
-
-        }
-
-    }
-    aside{
-       
-        margin-bottom: 40px;
-        text-align: center;
-        ul{
-           
-            gap: 28px;
-            button{
-                border: 3px solid $aperol;
-                color: white;
-                font-family: sans-serif;
-                font-weight: 900;
-                font-size: rem-calc(20);
-                background-color: transparent;
-                height: 54px;
-                width: 170px;
-                margin:14px 0;
-                cursor: pointer;
-                
-                    
-
-                    
-                }
-                button:hover {
-                        
-                    background-color: $aperol;
-                }
-                @include md{
-                    display:none;
-        
-                }
-                
+#tickets {
+	>div {
+		background-color: $onyx;
+		@include md {
+			padding: 0 78px 76px;
+		}
+		@include lg {
+			margin-left: 24px;
+			margin-right: 24px;
+		}
+		@include xl {
+			padding: 0 200px 70px;
+		}
+	}
+	h1 {
+		color: $aperol;
+		padding: 24px;
+	}
+	article {
+		display: none;
+		@include md {
+			color: white;
+			display: block;
+			font-family: Montserrat, sans-serif;
+			font-size: rem-calc(19);
+			font-weight: 200;
+		}
+		@include lg {
+			font-size: rem-calc(28);
+		}
+		@include xl {
+			line-height: 52px;
+		}
+	}
+	aside {
+		margin-bottom: 40px;
+		text-align: center;
+		ul {
+			gap: 28px;
+			button {
+				background-color: transparent;
+				border: 3px solid $aperol;
+				color: white;
+				cursor: pointer;
+				font-family: sans-serif;
+				font-size: rem-calc(20);
+				font-weight: 900;
+				height: 54px;
+				margin: 14px 0;
+				width: 170px;
+			}
+			button:hover {
+				background-color: $aperol;
+			}
+			@include md {
+				display: none;
+			}
+		}
+	}
+	section {
+		background-color: white;
+		display: none;
+		margin-top: 40px;
+		padding: 0 78px;
+		p {
+			font-family: 'Montserrat', sans-serif;
+			font-size: rem-calc(16);
+			font-weight: 200;
+			margin-top: 12px;
+			@include lg {
+				font-size: rem-calc(19);
+			}
+			@include xl {
+				font-size: rem-calc(20);
+			}
+		}
+		h1 {
+			font-family: 'Roboto condensed', sans-serif;
+			font-size: rem-calc(25);
+			margin-bottom: 12px;
+			@include lg {
+				margin-bottom: 40px;
+			}
+		}
+		@include md {
+			background-color: white;
+			display: grid;
+			font-weight: 900;
+			gap: 20px;
+			grid-template-areas: "t1 t1"
+                "t2 t3"
+                "t4 t4";
+			grid-template-columns: 50% auto;
+		}
+		@include lg {
+			grid-template-areas: "t1 t2"
+                "t1 t3"
+                "t4 t4";
+			margin-top: 50px;
+			padding: 0 24px;
+		}
+		@include xl {
+			margin-top: 56px;
+			padding: 0 250px;
+		}
+		#discount {
+			grid-area: t1;
+		}
+		#member {
+			grid-area: t2;
+		}
+		#group {
+			grid-area: t3;
+		}
+		#exhibitions {
+			grid-area: t4;
+            @include lg{
+                text-align: center;
             }
-        }
-       
-
-    
-    section{
-        p{
-
-        
-        font-family: 'Montserrat', sans-serif;
-        font-size: rem-calc(16);
-        font-weight: 200;
-        @include lg{
-            font-size: rem-calc(19);
-        
-
-        }
-        @include xl{
-            font-size: rem-calc(20);
-        
-
-        }
-    }
-    h1{
-        font-family: 'Roboto condensed', sans-serif;
-        font-size: rem-calc(25);
-        font-weight: 900;
-
-    }
-        display: none;
-        @include md{ 
-            display: grid;
-            background-color: white;
-           grid-template-columns: 50% auto;
-           grid-template-areas: "t1 t1"
-           "t2 t3"
-           "t4 t4";
-
-        }
-        @include lg{
-            grid-template-areas: "t1 t2"
-           "t1 t3"
-           "t4 t4";
-
-        }
-       #discount{
-           grid-area: t1;
-
-           }
-           #member{
-            grid-area: t2;
-           }
-           #group{
-            grid-area: t3;
-           }
-           #exhibitions{
-            grid-area: t4;
-           }
-       }
-
-    }
+			
+		}
+	}
+}

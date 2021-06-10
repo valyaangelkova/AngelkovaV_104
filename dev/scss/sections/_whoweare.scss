@@ -99,4 +99,7 @@ button{
     font-size: rem-calc(19);
     padding: 10px 22px;
 }
+button:hover{
+    color:$onyx;
+}
 }
