@@ -1,115 +1,91 @@
-footer{
-    padding: 0 8px;
-    @include md{
-        padding: 0 24px;
-
-    }
-    @include lg{
-        padding: 0 40px;
-
-    }
-    @include xl{
-        padding: 0 56px;
-
-    }
-    background-color: $header;
-    
-    >div{
-        display: flex;
-        justify-content: space-between;
-        // align-items: center;
-       
-    }
-    aside{
-        
-    img{
-        margin-top: 12px;
-        
-        width: 140px;
-        @include md {
-            width: 260px;
-        }
-        @include md {
-            width: 309px;
-            margin-top: 26px;
-
-        }
-    }
-    }
-      
-
-    
-    article{ 
-       
-
-    
-    ul{
-        display: flex;
-        justify-content: flex-end;
-        gap: 10px;
-        margin-bottom: 20px;
-        li{
-            margin-top: 12px;
-            @include md  {
-                margin-top: 26px;
-
-            }
-            // font-size: rem-calc(25);
-            a:link,
-                    a:visited {
-                        color: $onyx;
-                        font-size: rem-calc(25);
-
-                        &:hover,
-                        &:active {
-                            color: $aperol;
-                        }
-                    }
-        }
-      
-    }
-    div{
-       
-        p{
-            width: 100%;
-            text-align: right;
-            font-family: Montserrat, sans-serif;
-            font-weight: 200;
-            font-size: rem-calc(13);
-            margin: 5px 0;
-        }
-        address{
-            margin-top: 10px;
-            margin-bottom: 12px;
-            @include md {
-
-            
-            margin-top: 32px;
-            margin-bottom: 37px;
-
-        }
-        @include lg{
-            margin-bottom: 33px;
-        }
-            font-family: Montserrat, sans-serif;
-            font-weight: 200;
-            font-size: rem-calc(16);
-            font-style: normal;
-            
-
-        }
-        a:link,
-                    a:visited {
-                        color: $onyx;
-                        font-size: rem-calc(16);
-                        text-decoration: none;
-
-                        &:hover,
-                        &:active {
-                            color: $aperol;
-                        }
-                    }
-    }
-    
-}
+footer {
+	background-color: $header;
+	padding: 0 8px;
+	@include md {
+		padding: 0 24px;
+	}
+	@include lg {
+		padding: 0 40px;
+	}
+	@include xl {
+		padding: 0 56px;
+	}
+	>div {
+		// align-items: center;
+		// justify-content: space-between;
+		display: flex;
+	}
+	aside {
+		margin-right: auto;
+		img {
+			margin-top: 12px;
+			width: 140px;
+			@include md {
+				margin-top: 26px;
+				width: 309px;
+			}
+		}
+	}
+	article {
+		margin-left: auto;
+		ul {
+			display: flex;
+			gap: 10px;
+			justify-content: flex-end;
+			margin-bottom: 20px;
+			li {
+				// font-size: rem-calc(25);
+				margin-top: 12px;
+				@include md {
+					margin-top: 26px;
+				}
+				a:link,
+                a:visited {
+					color: $onyx;
+					font-size: rem-calc(25);
+					&:hover,
+                    &:active {
+						color: $aperol;
+					}
+				}
+			}
+		}
+		div {
+			width: 100%;
+			p {
+				font-family: Montserrat, sans-serif;
+				font-size: rem-calc(13);
+				font-weight: 200;
+				margin: 5px 0;
+				text-align: right;
+				width: 100%;
+			}
+			address {
+				font-family: Montserrat,
+                sans-serif;
+				font-size: rem-calc(16);
+				font-style: normal;
+				font-weight: 200;
+				margin-bottom: 12px;
+				margin-top: 10px;
+				@include md {
+					margin-bottom: 37px;
+					margin-top: 32px;
+				}
+				@include lg {
+					margin-bottom: 33px;
+				}
+			}
+			a:link,
+            a:visited {
+				color: $onyx;
+				font-size: rem-calc(16);
+				text-decoration: none;
+				&:hover,
+                &:active {
+					color: $aperol;
+				}
+			}
+		}
+	}
 }

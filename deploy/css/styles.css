@@ -193,7 +193,8 @@ header > div #logo-container {
   padding: 10px;
   cursor: pointer;
 }
-header > div #logo-container a:link, header > div #logo-container a:visited {
+header > div #logo-container a:link,
+header > div #logo-container a:visited {
   transition: 0.25s;
 }
 header > div #burger-container {
@@ -225,8 +226,8 @@ header > div #nav-container {
 }
 
 footer {
-  padding: 0 8px;
   background-color: #D8D8D8;
+  padding: 0 8px;
 }
 @media (min-width: 768px) {
   footer {
@@ -245,7 +246,9 @@ footer {
 }
 footer > div {
   display: flex;
-  justify-content: space-between;
+}
+footer aside {
+  margin-right: auto;
 }
 footer aside img {
   margin-top: 12px;
@@ -253,19 +256,17 @@ footer aside img {
 }
 @media (min-width: 768px) {
   footer aside img {
-    width: 260px;
+    margin-top: 26px;
+    width: 309px;
   }
 }
-@media (min-width: 768px) {
-  footer aside img {
-    width: 309px;
-    margin-top: 26px;
-  }
+footer article {
+  margin-left: auto;
 }
 footer article ul {
   display: flex;
-  justify-content: flex-end;
   gap: 10px;
+  justify-content: flex-end;
   margin-bottom: 20px;
 }
 footer article ul li {
@@ -286,26 +287,29 @@ footer article ul li a:visited:hover,
 footer article ul li a:visited:active {
   color: #E64415;
 }
-footer article div p {
+footer article div {
   width: 100%;
-  text-align: right;
+}
+footer article div p {
   font-family: Montserrat, sans-serif;
-  font-weight: 200;
   font-size: 0.8125rem;
+  font-weight: 200;
   margin: 5px 0;
+  text-align: right;
+  width: 100%;
 }
 footer article div address {
-  margin-top: 10px;
-  margin-bottom: 12px;
   font-family: Montserrat, sans-serif;
-  font-weight: 200;
   font-size: 1rem;
   font-style: normal;
+  font-weight: 200;
+  margin-bottom: 12px;
+  margin-top: 10px;
 }
 @media (min-width: 768px) {
   footer article div address {
-    margin-top: 32px;
     margin-bottom: 37px;
+    margin-top: 32px;
   }
 }
 @media (min-width: 1024px) {
@@ -326,19 +330,18 @@ footer article div a:visited:active {
 }
 
 #hero {
-  height: 70vh;
-  background-size: cover;
-  background-position: center;
   background-image: url("../img/images/hero.jpg");
+  background-position: center;
+  background-size: cover;
   height: 132px;
   width: 100%;
 }
 @media (min-width: 768px) {
   #hero {
-    height: 320px;
-    display: flex;
-    justify-content: center;
     align-items: center;
+    display: flex;
+    height: 320px;
+    justify-content: center;
   }
 }
 @media (min-width: 1024px) {
@@ -356,21 +359,20 @@ footer article div a:visited:active {
 }
 @media (min-width: 768px) {
   #hero > div {
-    display: inline-block;
-    text-align: justify;
-    text-justify: inter-word;
     background-color: rgba(230, 68, 21, 0.8);
     color: #fff;
-    padding: 20px;
-    width: 558px;
+    display: inline-block;
     line-height: 41px;
     padding: 20px 76px;
+    text-align: justify;
+    text-justify: inter-word;
+    width: 558px;
   }
 }
 @media (min-width: 1024px) {
   #hero > div {
-    width: 710px;
     padding: 64px 48px;
+    width: 710px;
   }
 }
 @media (min-width: 1200px) {
@@ -380,8 +382,8 @@ footer article div a:visited:active {
 }
 #hero p {
   font-family: Montserrat;
-  font-weight: 900;
   font-size: 1.5625rem;
+  font-weight: 900;
 }
 @media (min-width: 1024px) {
   #hero p {
@@ -396,9 +398,9 @@ footer article div a:visited:active {
 #hero2 div {
   background-color: rgba(230, 68, 21, 0.8);
   color: white;
+  margin-top: -80px;
   padding: 20px;
   width: 272px;
-  margin-top: -80px;
 }
 @media (min-width: 768px) {
   #hero2 div {
@@ -407,8 +409,8 @@ footer article div a:visited:active {
 }
 #hero2 div p {
   font-family: "Montserrat", sans-serif;
-  font-weight: 900;
   font-size: 1.5625rem;
+  font-weight: 900;
 }
 
 #search {
@@ -432,25 +434,24 @@ footer article div a:visited:active {
   }
 }
 #search > div {
-  display: grid;
-  grid-template-columns: 20px auto 20px;
-  grid-template-areas: ". header .";
-  grid-area: header;
   display: flex;
+  grid-area: header;
+  grid-template-areas: ". header .";
+  grid-template-columns: 20px auto 20px;
   height: 7vh;
 }
 #search > div section {
-  margin-left: auto;
-  display: flex;
   align-items: center;
+  display: flex;
+  margin-left: auto;
 }
 #search > div section button {
+  background-color: #D8D8D8;
   border: none;
   color: #1A171B;
   font-family: "Montserrat", sans-serif;
-  font-weight: 200;
   font-size: 20px;
-  background-color: #D8D8D8;
+  font-weight: 200;
 }
 #search > div section button:hover {
   color: #E64415;
@@ -469,9 +470,9 @@ footer article div a:visited:active {
 }
 @media (min-width: 768px) {
   #search > div section #mg {
+    color: #1A171B;
     cursor: pointer;
     display: block;
-    color: #1A171B;
   }
   #search > div section #mg button:hover {
     color: #E64415;
@@ -598,84 +599,94 @@ footer article div a:visited:active {
 }
 
 #partners {
-  margin: 88px 0 32px 24px;
+  margin: 88px 24px;
 }
 @media (min-width: 768px) {
   #partners {
-    margin: 128px 0 56px 80px;
+    margin: 98px 56px;
+  }
+}
+@media (min-width: 1200px) {
+  #partners {
+    margin: 128px 220px;
   }
 }
 #partners h1 {
   margin-bottom: 40px;
 }
+@media (min-width: 768px) {
+  #partners h1 {
+    margin-left: 80px;
+  }
+}
+@media (min-width: 1024px) {
+  #partners h1 {
+    margin-left: 42px;
+  }
+}
+@media (min-width: 1200px) {
+  #partners h1 {
+    margin-left: 252px;
+  }
+}
 #partners ul {
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   #partners ul {
     display: inline-block;
   }
 }
-#partners ul .arrows a:link,
-#partners ul .arrows a:visited {
+#partners .arrows a:link,
+#partners .arrows a:visited {
   color: #E64415;
   font-size: 1.875rem;
   text-decoration: none;
 }
-#partners ul .arrows a:link:hover, #partners ul .arrows a:link:active,
-#partners ul .arrows a:visited:hover,
-#partners ul .arrows a:visited:active {
+#partners .arrows a:link:hover, #partners .arrows a:link:active,
+#partners .arrows a:visited:hover,
+#partners .arrows a:visited:active {
   color: #1A171B;
 }
-@media (min-width: 768px) {
-  #partners ul .arrows #a1 {
-    display: flex;
-    margin-right: auto;
-  }
-  #partners ul .arrows #a3 {
-    display: flex;
-    margin-left: auto;
-  }
-}
 @media (min-width: 1024px) {
-  #partners ul .arrows {
+  #partners .arrows {
     display: none;
   }
 }
-#partners ul #main {
+#partners #main {
   display: flex;
   justify-content: center;
 }
-#partners ul #main img {
-  width: 235px;
+#partners #main img {
   height: 100px;
+  width: 235px;
 }
 @media (min-width: 768px) {
-  #partners ul #main {
+  #partners #main {
     display: none;
   }
 }
-#partners ul .main-2 {
+#partners .main-2 {
   display: none;
 }
 @media (min-width: 768px) {
-  #partners ul .main-2 {
+  #partners .main-2 {
     display: inline;
   }
 }
-#partners ul .logos {
+#partners .logos {
   display: none;
 }
 @media (min-width: 1024px) {
-  #partners ul .logos {
+  #partners .logos {
     display: inline;
   }
 }
-#partners ul #fixsize img {
-  width: 235px;
+#partners #fixsize img {
   height: 100px;
+  width: 235px;
 }
 
 #season2021 > div #calendar {
@@ -694,36 +705,36 @@ footer article div a:visited:active {
   }
 }
 #season2021 > div #calendar h1 {
-  text-align: center;
   font-family: sans-serif;
   font-size: 3.75rem;
   font-weight: 700;
   margin-bottom: 72px;
+  text-align: center;
 }
 #season2021 > div #calendar .calendar-grid {
+  column-gap: 35px;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   justify-items: center;
   row-gap: 28px;
-  column-gap: 35px;
 }
 @media (min-width: 1200px) {
   #season2021 > div #calendar .calendar-grid {
-    row-gap: 35px;
     column-gap: 42px;
+    row-gap: 35px;
   }
 }
 #season2021 > div #calendar .weekdays {
-  display: grid;
-  row-gap: 28px;
+  color: white;
   column-gap: 35px;
+  display: grid;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.875rem;
+  font-style: 200;
   grid-template-columns: repeat(7, 1fr);
   justify-items: center;
-  font-family: "Montserrat", sans-serif;
-  font-style: 200;
-  font-size: 1.875rem;
-  color: white;
   margin-bottom: 28px;
+  row-gap: 28px;
 }
 #season2021 > div #season {
   background-color: #1A171B;
@@ -742,11 +753,11 @@ footer article div a:visited:active {
   color: #1A171B;
 }
 #season2021 > div #season h1 {
-  padding: 32px 24px;
-  display: inline-block;
-  text-align: left;
-  font-family: "Roboto Condensed", sans-serif;
   color: white;
+  display: inline-block;
+  font-family: "Roboto Condensed", sans-serif;
+  padding: 32px 24px;
+  text-align: left;
 }
 @media (min-width: 768px) {
   #season2021 > div #season h1 {
@@ -756,7 +767,8 @@ footer article div a:visited:active {
 @media (min-width: 1024px) {
   #season2021 > div #season h1 {
     color: #1A171B;
-    padding: 56px 42px;
+    padding: 56px 0px;
+    margin-left: 40px;
   }
 }
 @media (min-width: 1024px) {
@@ -766,15 +778,15 @@ footer article div a:visited:active {
   }
 }
 #season2021 > div #season #input {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: center;
   padding: 28px 56px 0;
 }
 #season2021 > div #season #input input {
+  border: 3px solid #E64415;
   border-radius: 4px;
   height: 30px;
-  border: 3px solid #E64415;
 }
 #season2021 > div #season #input input::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -792,17 +804,17 @@ footer article div a:visited:active {
 }
 #season2021 > div #season #input button {
   background-color: transparent;
-  color: #E64415;
   border: 3px solid #E64415;
-  font-size: 1.875rem;
-  margin-left: -31px;
-  padding-left: 0;
-  height: 38px;
+  border-bottom: none;
   border-radius: 4px;
-  text-align: center;
   border-right: none;
   border-top: none;
-  border-bottom: none;
+  color: #E64415;
+  font-size: 1.875rem;
+  height: 38px;
+  margin-left: -31px;
+  padding-left: 0;
+  text-align: center;
 }
 @media (min-width: 768px) {
   #season2021 > div #season #input {
@@ -814,11 +826,11 @@ footer article div a:visited:active {
 }
 @media (min-width: 768px) {
   #season2021 > div #season #psdvm {
-    padding: 0 42px 32px;
-    list-style: none;
     display: flex;
-    justify-content: center;
     gap: 35px;
+    justify-content: center;
+    list-style: none;
+    padding: 0 42px 32px;
   }
 }
 @media (min-width: 768px) and (min-width: 1024px) {
@@ -828,13 +840,13 @@ footer article div a:visited:active {
 }
 @media (min-width: 768px) {
   #season2021 > div #season #psdvm button {
-    color: #E64415;
-    border: 1px solid #E64415;
     background-color: transparent;
+    border: 1px solid #E64415;
     border-radius: 6px;
+    color: #E64415;
+    cursor: pointer;
     height: 35px;
     width: 109px;
-    cursor: pointer;
   }
 }
 @media (min-width: 768px) {
@@ -845,12 +857,12 @@ footer article div a:visited:active {
 }
 #season2021 > div #images ul {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   grid-template-areas: " a1 image1 a2";
+  grid-template-columns: repeat(3, 1fr);
 }
 #season2021 > div #images ul .arrows {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: center;
 }
 #season2021 > div #images ul .arrows a:link,
@@ -871,8 +883,8 @@ footer article div a:visited:active {
 }
 @media (min-width: 1024px) {
   #season2021 > div #images ul .arrows {
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: center;
   }
   #season2021 > div #images ul .arrows a:link,
@@ -896,16 +908,16 @@ footer article div a:visited:active {
 @media (min-width: 768px) {
   #season2021 > div #images ul {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     grid-template-areas: " image1 image2 image3 " "bigimg bigimg bigimg";
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
   }
 }
 @media (min-width: 1024px) {
   #season2021 > div #images ul {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
     grid-template-areas: "a1 image1 image2 image3 a2";
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 #season2021 > div #images ul #img1 {
@@ -913,11 +925,11 @@ footer article div a:visited:active {
 }
 @media (min-width: 768px) {
   #season2021 > div #images ul #img1 {
-    display: block;
-    grid-area: image1;
     background-image: url("../img/images/image4.jpg");
     background-position: center;
     background-size: cover;
+    display: block;
+    grid-area: image1;
     height: 148px;
   }
 }
@@ -938,11 +950,11 @@ footer article div a:visited:active {
 }
 @media (min-width: 768px) {
   #season2021 > div #images #img3 {
-    display: list-item;
-    grid-area: image3;
     background-image: url("../img/images/image3.jpg");
     background-position: center;
     background-size: cover;
+    display: list-item;
+    grid-area: image3;
     height: 148px;
   }
 }
@@ -951,13 +963,13 @@ footer article div a:visited:active {
 }
 @media (min-width: 768px) {
   #season2021 > div #images #bigimg {
-    display: list-item;
-    grid-area: bigimg;
     background-image: url("../img/images/image1.jpg");
     background-position: center;
     background-size: cover;
-    width: 100%;
+    display: list-item;
+    grid-area: bigimg;
     height: 258px;
+    width: 100%;
   }
 }
 @media (min-width: 1024px) {
@@ -1113,10 +1125,10 @@ footer article div a:visited:active {
 }
 
 #whoweare {
-  margin-bottom: 80px;
   display: grid;
-  grid-template-columns: 24px auto 24px;
   grid-template-areas: ". who .";
+  grid-template-columns: 24px auto 24px;
+  margin-bottom: 80px;
 }
 @media (min-width: 768px) {
   #whoweare {
@@ -1140,22 +1152,22 @@ footer article div a:visited:active {
   grid-area: who;
 }
 #whoweare h1 {
-  display: flex;
   align-content: center;
+  display: flex;
   justify-content: center;
-  margin-top: 80px;
   margin-bottom: 24px;
+  margin-top: 80px;
 }
 @media (min-width: 768px) {
   #whoweare h1 {
-    margin-top: 98px;
     margin-bottom: 32px;
+    margin-top: 98px;
   }
 }
 @media (min-width: 1024px) {
   #whoweare h1 {
-    margin-top: 112px;
     margin-bottom: 48px;
+    margin-top: 112px;
   }
 }
 @media (min-width: 1200px) {
@@ -1164,30 +1176,30 @@ footer article div a:visited:active {
   }
 }
 #whoweare article {
+  color: #E64415;
   display: grid;
+  font-family: sans-serif;
+  font-size: 1.3125rem;
+  font-weight: 400;
   grid-template-areas: " pt1 pt1" "pt2 pt2";
   grid-template-columns: repeat(2 1fr);
-  color: #E64415;
-  font-family: sans-serif;
-  font-weight: 400;
-  font-size: 1.3125rem;
   line-height: 29px;
 }
 @media (min-width: 1200px) {
   #whoweare article {
-    grid-template-areas: " pt1 pt2";
     gap: 40px;
+    grid-template-areas: " pt1 pt2";
   }
 }
 #whoweare article #pt1 {
+  grid-area: pt1;
   text-align: justify;
   text-justify: inter-word;
-  grid-area: pt1;
 }
 #whoweare article #pt2 {
+  display: none;
   text-align: justify;
   text-justify: inter-word;
-  display: none;
 }
 @media (min-width: 768px) {
   #whoweare article #pt2 {
@@ -1196,15 +1208,15 @@ footer article div a:visited:active {
   }
 }
 #whoweare button {
-  display: flex;
-  margin-left: auto;
-  margin-top: 12px;
-  color: white;
   background-color: #E64415;
-  border-radius: 0;
   border: none;
+  border-radius: 0;
+  color: white;
+  display: flex;
   font-family: sans-serif;
   font-size: 1.1875rem;
+  margin-left: auto;
+  margin-top: 12px;
   padding: 10px 22px;
 }
 @media (min-width: 768px) {

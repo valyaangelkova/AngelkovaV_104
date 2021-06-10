@@ -1,96 +1,90 @@
 // Partners//
-#partners{
-    margin: 88px 0 32px 24px;
+#partners {
+	margin: 88px 24px;
     @include md {
-        margin: 128px 0 56px 80px;
-
+		margin: 98px  56px ;
+	}
+    @include xl{
+        margin:128px 220px;
     }
-
-   
-    h1{
-        margin-bottom: 40px;
-    }
-    ul{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+	
+	h1 {
+		margin-bottom: 40px;
         @include md{
-            display: inline-block;
-        }
-        li{
-            
-          
+            margin-left:80px;
 
-       
-       
 
-    }
-    .arrows{
-        a:link,
-        a:visited {
-            color: $aperol;
-            font-size: rem-calc(30);
-            text-decoration: none;
-
-            &:hover,
-            &:active {
-                color: $onyx;
-            }
-        }
-        @include md{
-            #a1{
-                display: flex;
-                margin-right: auto;
-            }
-            #a3{
-                display: flex;
-                margin-left: auto;
-            }
         }
         @include lg{
-            display: none;
-            
+            margin-left:42px;
+
+
         }
-    }
-       
-        #main{
-            display: flex;
-            justify-content: center;
-            img{
-                width: 235px;
-                height:100px;
+        @include xl{
+            margin-left:252px;
+
+
+        }
+    
+        
+	}
+	ul {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		@include lg {
+			display: inline-block;
+
+		}
+        
+        }
+		li {
            
-              
-            }
-            @include md{ 
-                display: none;
-            }
+		}
+		.arrows {
+			a:link,
+            a:visited {
+				color: $aperol;
+				font-size: rem-calc(30);
+				text-decoration: none;
+				&:hover,
+                &:active {
+					color: $onyx;
+				}
+			}
+			
+			@include lg {
+				display: none;
+			}
+		}
+		#main {
+			display: flex;
+			justify-content: center;
+			img {
+				height: 100px;
+				width: 235px;
+			}
+			@include md {
+				display: none;
+			}
+		}
+		.main-2 {
+			display: none;
+			@include md {
+				display: inline;
+			}
+		}
+		.logos {
+			display: none;
+			@include lg {
+				display: inline;
+			}
+		}
+		#fixsize {
+			img {
+				height: 100px;
+				width: 235px;
+			}
+		}
+	}
 
-        }
-        .main-2{
-
-            display:none;
-            @include md{
-                display: inline;
-
-            }
-           
-
-        }
-        .logos{
-            display:none;
-            @include lg{
-                display:inline;
-
-            }
-        }
-        #fixsize{
-            img{
-
-         width: 235px;
-             height:100px;
-         }
-
-         }
-    }
-}

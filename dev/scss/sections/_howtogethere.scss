@@ -4,10 +4,15 @@
   margin:80px 0px;
   @include md {
     margin:98px 0px;
+    
+      
+    
 
   }
   @include lg {
     margin:112px 40px;
+    
+    
 
   }
   @include xl {
@@ -73,6 +78,8 @@
             grid-template-areas: " p1 p3  map map"
             " p2 p4  map map"
             "p5 p6 map map";
+
+      
         }
       #p1{
         
@@ -113,3 +120,4 @@
       }
     }
   }
+

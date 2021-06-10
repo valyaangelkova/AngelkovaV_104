@@ -1,376 +1,260 @@
 // Season 2021//
 
 #season2021 {
-   
-
-    >div {
-    
-
-
-        #calendar {
-
-           button:hover{
-               background-color: $aperol;
-               color: $onyx;
-           }
-            background-color: $onyx;
-            color: white;
-            display: none;
-
-            @include lg {
-                display: block;
-                padding: 32px 190px ;
-
-            
-            }
-
-            h1 {
-                text-align: center;
-               
-                font-family: sans-serif;
-                font-size: rem-calc(60);
-                font-weight:700;
-                margin-bottom: 72px;
-
-            }
-            .calendar-grid
-{
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  justify-items: center;
-  row-gap: 28px;
-  column-gap: 35px;
-  @include xl{
-    row-gap: 35px;
-    column-gap: 42px;
-
-  }
-}
-
-.weekdays{
-  display: grid;
-  row-gap: 28px;
-  column-gap: 35px;
-  grid-template-columns: repeat(7, 1fr);
-  justify-items: center;
-  font-family: 'Montserrat', sans-serif;
-  font-style: 200;
-  font-size: rem-calc(30);
-  color: white;
-  margin-bottom: 28px;
-}
-
-           
-
-
-
-
-
-
-           
-            
-        }
-
-        #season {
-            background-color: $onyx;
-            @include lg{
-                background-color: white;
-                
-            }
-            @include xl{
-                
-            }
-            #button{
-                display: flex;
-                justify-content: center;
-                padding: 28px 94px;
-            }
-            button:hover{
-                color: $onyx;
-            }
-            h1 {
-                padding:32px 24px;
-                display: inline-block;
-                text-align: left;
-                font-family: 'Roboto Condensed', sans-serif;
-                
-                color: white;
-                @include md {
-                    padding: 32px 80px
-                }
-                @include lg {
-                    color: $onyx;
-                    padding:56px 42px;
-                }
-                
-            }
-            #title_{
-                @include lg{
-                    display: flex;
-                    justify-content: space-between;
-                }
-
-            }
-
-            #input {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 28px 56px 0;
-                input{
-
-                
-                border-radius: 4px;
-                height: 30px;
-                border: 3px solid $aperol;
-                &::placeholder {
-                    /* Chrome, Firefox, Opera, Safari 10.1+ */
-                    color: $aperol;
-                    /* Firefox */
-                    opacity: 1;
-                }
-
-                &:-ms-input-placeholder {
-                    /* Internet Explorer 10-11 */
-                    color: $aperol;
-                }
-
-                &::-ms-input-placeholder {
-                    /* Microsoft Edge */
-                    color: $aperol;
-                }
-            }
-            button{
-                background-color: transparent;
-                color: $aperol;
-                border:3px solid $aperol;
-                font-size: rem-calc(30);
-                margin-left: -31px;
-                padding-left: 0;
-                height: 38px;
-                border-radius: 4px;
-                text-align: center;
-                border-right: none;
-                border-top: none;
-                border-bottom: none;
-            }
-
-                @include md {
-                    display: none;
-                }
-
-            }
-
-            
-            #psdvm {
-                display: none;
-
-                @include md {
-                    padding:0 42px 32px;
-                    @include lg{
-                        padding:56px ;
-                    }
-
-
-                    list-style: none;
-                    display: flex;
-                    justify-content: center;
-                    gap: 35px;
-                    button{
+	>div {
+		#calendar {
+			background-color: $onyx;
+			color: white;
+			display: none;
+			button:hover {
+				background-color: $aperol;
+				color: $onyx;
+			}
+			@include lg {
+				display: block;
+				padding: 32px 190px;
+			}
+			h1 {
+				font-family: sans-serif;
+				font-size: rem-calc(60);
+				font-weight: 700;
+				margin-bottom: 72px;
+				text-align: center;
+			}
+			.calendar-grid {
+				column-gap: 35px;
+				display: grid;
+				grid-template-columns: repeat(7, 1fr);
+				justify-items: center;
+				row-gap: 28px;
+				@include xl {
+					column-gap: 42px;
+					row-gap: 35px;
+				}
+			}
+			.weekdays {
+				color: white;
+				column-gap: 35px;
+				display: grid;
+				font-family: 'Montserrat', sans-serif;
+				font-size: rem-calc(30);
+				font-style: 200;
+				grid-template-columns: repeat(7, 1fr);
+				justify-items: center;
+				margin-bottom: 28px;
+				row-gap: 28px;
+			}
+		}
+		#season {
+			background-color: $onyx;
+			@include lg {
+				background-color: white;
+			}
+			@include xl {
+			}
+			#button {
+				display: flex;
+				justify-content: center;
+				padding: 28px 94px;
+			}
+			button:hover {
+				color: $onyx;
+			}
+			h1 {
+				color: white;
+				display: inline-block;
+				font-family: 'Roboto Condensed', sans-serif;
+				padding: 32px 24px;
+				text-align: left;
+				@include md {
+					padding: 32px 80px;
+				}
+				@include lg {
+					color: $onyx;
+					padding: 56px 0px;
+					margin-left:40px
+				}
+			}
+			#title_ {
+				@include lg {
+					display: flex;
+					justify-content: space-between;
+				}
+			}
+			#input {
+				align-items: center;
+				display: flex;
+				justify-content: center;
+				padding: 28px 56px 0;
+				input {
+					border: 3px solid $aperol;
+					border-radius: 4px;
+					height: 30px;
+					&::placeholder {
+						/* Chrome, Firefox, Opera, Safari 10.1+ */
                         color: $aperol;
-                        border: 1px solid $aperol;
-                        background-color: transparent;
-                        border-radius: 6px;
-                        height: 35px;
-                        width: 109px;
-                        cursor: pointer;
-                        
-                    }
-                    button:hover{
-                        background-color: $aperol;
-                        color:white;
-                    }
-
-                    
-
-                }
-
-                // display: grid;
-
-                // grid-template-columns: repeat(5 1fr);
-                // grid-template-areas: " title title ..."
-                // "p s d v m";
-
-
-                //  @include lg {
-                //     grid-template-columns: repeat(7 1fr);
-                // grid-template-areas: " title title p s d v m"
-                // ;
-
-                //  }
-                //  #p{
-                //     grid-area: p;
-                // }
-                // #s{
-                //     grid-area: s;
-                // }
-                // #d{
-                //     grid-area: d;
-                // }
-                // #v{
-                //     grid-area: v;
-                // }
-                // #m{
-                //     grid-area: m;
-                // }
-
-            }
-        }
-
-        #images {
-            ul{
-               
-                .arrows{
-                    a:link,
+						/* Firefox */
+                        opacity: 1;
+					}
+					&:-ms-input-placeholder {
+						/* Internet Explorer 10-11 */
+                        color: $aperol;
+					}
+					&::-ms-input-placeholder {
+						/* Microsoft Edge */
+                        color: $aperol;
+					}
+				}
+				button {
+					background-color: transparent;
+					border: 3px solid $aperol;
+					border-bottom: none;
+					border-radius: 4px;
+					border-right: none;
+					border-top: none;
+					color: $aperol;
+					font-size: rem-calc(30);
+					height: 38px;
+					margin-left: -31px;
+					padding-left: 0;
+					text-align: center;
+				}
+				@include md {
+					display: none;
+				}
+			}
+			#psdvm {
+				display: none;
+				@include md {
+					display: flex;
+					gap: 35px;
+					justify-content: center;
+					list-style: none;
+					padding: 0 42px 32px;
+					@include lg {
+						padding: 56px;
+					}
+					button {
+						background-color: transparent;
+						border: 1px solid $aperol;
+						border-radius: 6px;
+						color: $aperol;
+						cursor: pointer;
+						height: 35px;
+						width: 109px;
+					}
+					button:hover {
+						background-color: $aperol;
+						color: white;
+					}
+				}
+			}
+		}
+		#images {
+			ul {
+				display: grid;
+				grid-template-areas: " a1 image1 a2";
+				grid-template-columns: repeat(3, 1fr);
+				.arrows {
+					align-items: center;
+					display: flex;
+					justify-content: center;
+					a:link,
                     a:visited {
-                        color: $aperol;
-                        font-size: rem-calc(30);
-                        text-decoration: none;
-
-                        &:hover,
+						color: $aperol;
+						font-size: rem-calc(30);
+						text-decoration: none;
+						&:hover,
                         &:active {
-                            color: white;
-                        }
-                    }
-                    display: flex;
-                        align-items: center;
-                        justify-content: center;
-                    @include md{
-                        display: none;
-                    }
-                    @include lg{
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        a:link,
+							color: white;
+						}
+					}
+					@include md {
+						display: none;
+					}
+					@include lg {
+						align-items: center;
+						display: flex;
+						justify-content: center;
+						a:link,
                         a:visited {
-                            color: $aperol;
-                            font-size: rem-calc(30);
-                            text-decoration: none;
-    
-                            &:hover,
+							color: $aperol;
+							font-size: rem-calc(30);
+							text-decoration: none;
+							&:hover,
                             &:active {
-                                color: $onyx;
-                            }
-                        }
-
-                        
-                        #a1{
-                            grid-area: a1;
-
-                        }
-                        #a2{
-                            grid-area: a2;
-                        }
-
-                    }
-                }
-            
-            
-            // display: grid;
-            // grid-template-columns: 40px auto 40px;
-            // grid-template-areas: ". img .";
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-grid-template-areas: " a1 image1 a2";
-            @include md {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                grid-template-areas: " image1 image2 image3 "
-                    "bigimg bigimg bigimg";
-                    gap: 24px
-
-            }
-
-            @include lg {
-                display: grid;
-                grid-template-columns: repeat(5, 1fr);
-                grid-template-areas: "a1 image1 image2 image3 a2";
-
-
-            }
-
-
-            #img1 {
-              display: none;
-                // margin: 0 20px;
-    
-
-                @include md {
-                    display: block;
-                    grid-area: image1;
-                    background-image: url("../img/images/image4.jpg");
-                    background-position: center;
-                    background-size: cover;
-                    
-                    height: 148px;
-                }
-            }
-
-            #img2 {
-                background-image: url("../img/images/image2.jpg");
-                background-position: center;
-                background-size: cover;
-                height: 160px;
-
-                @include md {
-                    
-                    grid-area: image2;
-                    
-                        
-                        
-                        height: 148px;
-                    }
-
-                }
-            }
-
-            #img3 {
-                display: none;
-
-                @include md {
-                    display: list-item;
-                    grid-area: image3;
-                    background-image: url("../img/images/image3.jpg");
-                        background-position: center;
-                        background-size: cover;
-                        
-                        height: 148px;
-
-                }
-            }
-
-            #bigimg {
-                display: none;
-
-                @include md {
-                    display: list-item;
-                    grid-area: bigimg;
-                    background-image: url("../img/images/image1.jpg");
-                    background-position: center;
-                    background-size: cover;
-                    width: 100%;
-                    
-                    height: 258px;
-
-                }
-
-                @include lg {
-                    display: none;
-
-                }
-            }
-        }
-
-    }
+								color: $onyx;
+							}
+						}
+						#a1 {
+							grid-area: a1;
+						}
+						#a2 {
+							grid-area: a2;
+						}
+					}
+				}
+				@include md {
+					display: grid;
+					grid-template-areas: " image1 image2 image3 "
+                        "bigimg bigimg bigimg";
+					grid-template-columns: repeat(3, 1fr);
+					gap: 24px;
+				}
+				@include lg {
+					display: grid;
+					grid-template-areas: "a1 image1 image2 image3 a2";
+					grid-template-columns: repeat(5, 1fr);
+				}
+				#img1 {
+					// margin: 0 20px;
+					display: none;
+					@include md {
+						background-image: url("../img/images/image4.jpg");
+						background-position: center;
+						background-size: cover;
+						display: block;
+						grid-area: image1;
+						height: 148px;
+					}
+				}
+				#img2 {
+					background-image: url("../img/images/image2.jpg");
+					background-position: center;
+					background-size: cover;
+					height: 160px;
+					@include md {
+						grid-area: image2;
+						height: 148px;
+					}
+				}
+			}
+			#img3 {
+				display: none;
+				@include md {
+					background-image: url("../img/images/image3.jpg");
+					background-position: center;
+					background-size: cover;
+					display: list-item;
+					grid-area: image3;
+					height: 148px;
+				}
+			}
+			#bigimg {
+				display: none;
+				@include md {
+					background-image: url("../img/images/image1.jpg");
+					background-position: center;
+					background-size: cover;
+					display: list-item;
+					grid-area: bigimg;
+					height: 258px;
+					width: 100%;
+				}
+				@include lg {
+					display: none;
+				}
+			}
+		}
+	}
 }

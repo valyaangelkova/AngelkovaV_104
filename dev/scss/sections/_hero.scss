@@ -1,143 +1,47 @@
 #hero {
-height: 70vh;
-    background-size: cover;
-        background-position: center;
-        background-image: url("../img/images/hero.jpg");
-        height: 132px;
-        width:100%;
-        // margin-top: 0;
-        
-        // align-items: center;
-
-
-        @include md {
-            height: 320px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        @include lg {
-            height: 423px;
-        }
-
-        @include xl {
-            height: 595px;
-        }
-
-        >div {
-            display: none;
-            @include md{
-                display: inline-block;
-                text-align: justify;
-                text-justify: inter-word;
-                background-color: $aperol-transparent ;
-                color: $white;
-                padding: 20px;
-                width: 558px;
-                // height: 250px;
-                
-              
-               line-height: 41px;
-               padding: 20px 76px;
-                
-            }
-            @include lg {
-                width: 710px;
-                padding: 64px 48px;
-
-
-            }
-            @include xl {
-                // width: 895px;
-                padding: 98px 170px;
-
-
-            }
-
-            // background-color: $aperol-transparent ;
-            // color: $white;
-            // padding: 20px;
-            // width: 40vw;
-           
-
-           
-            
-
-            
-        }
-        p{
-            font-family: Montserrat;
-            font-weight: 900;
-            font-size: rem-calc(25);
-            @include lg{
-                font-size: rem-calc(30);
-
-            }
-        }
-    //     #mobile{
-    //         display: flex;
-    //         justify-items: center;
-           
-    //         margin-top: 100px;
-            
-    //         font-family: Montserrat;
-    //         font-weight: 900;
-    //         font-size: rem-calc(25);
-    //         background-color: $aperol-transparent ;
-    //             color: $white;
-    //             padding: 20px;
-    //             width: 40vw;
-    //         @include md{
-    //           display: none;
-
-    //     }
-    // }
+	background-image: url("../img/images/hero.jpg");
+	background-position: center;
+	background-size: cover;
+	height: 132px;
+	width: 100%;
+	@include md {
+		align-items: center;
+		display: flex;
+		height: 320px;
+		justify-content: center;
+	}
+	@include lg {
+		height: 423px;
+	}
+	@include xl {
+		height: 595px;
+	}
+	>div {
+		display: none;
+		@include md {
+			background-color: $aperol-transparent;
+			color: $white;
+			display: inline-block;
+			line-height: 41px;
+			padding: 20px 76px;
+			text-align: justify;
+			text-justify: inter-word;
+			width: 558px;
+		}
+		@include lg {
+			padding: 64px 48px;
+			width: 710px;
+		}
+		@include xl {
+			padding: 98px 170px;
+		}
+	}
+	p {
+		font-family: Montserrat;
+		font-size: rem-calc(25);
+		font-weight: 900;
+		@include lg {
+			font-size: rem-calc(30);
+		}
+	}
 }
-
-    // section {
-        //        div{ 
-
-
-
-        // }
-
-        // #covid {
-        //     display: grid;
-        //     grid-template-columns: 24px auto 24px;
-        //     grid-template-areas: ".hero.";
-        //     grid-area: hero;
-        //     display: flex;
-        //     justify-content: center;
-        //     align-items: center;
-
-        //     p {
-        //         border: orangered solid 1px;
-
-        //         height: 219px;
-
-        //         @include md {
-        //             height: 217px;
-        //         }
-
-        //         @include lg {
-        //             height: 250px;
-        //         }
-
-        //         @include xl {
-        //             height: 348px;
-        //         }
-
-        //         width: 80%;
-        //         text-align: center;
-
-
-
-        //     }
-
-
-        // }
-
-    // }
-
-

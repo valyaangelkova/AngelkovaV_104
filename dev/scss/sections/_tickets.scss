@@ -3,7 +3,7 @@
 #tickets {
 	>div {
 		background-color: $onyx;
-        padding-bottom: 40px;
+		padding-bottom: 40px;
 		@include md {
 			padding: 0 78px 76px;
 		}
@@ -39,7 +39,6 @@
 		margin-bottom: 40px;
 		text-align: center;
 		ul {
-           
 			gap: 28px;
 			button {
 				background-color: transparent;
@@ -50,7 +49,7 @@
 				font-size: rem-calc(20);
 				font-weight: 900;
 				height: 54px;
-				margin: 14px 0 ;
+				margin: 14px 0;
 				width: 200px;
 			}
 			button:hover {
@@ -92,14 +91,14 @@
 			font-weight: 900;
 			gap: 20px;
 			grid-template-areas: "t1 t1"
-                "t2 t3"
-                "t4 t4";
+				"t2 t3"
+				"t4 t4";
 			grid-template-columns: 50% auto;
 		}
 		@include lg {
 			grid-template-areas: "t1 t2"
-                "t1 t3"
-                "t4 t4";
+				"t1 t3"
+				"t4 t4";
 			margin-top: 50px;
 			padding: 0 24px;
 		}
@@ -118,10 +117,9 @@
 		}
 		#exhibitions {
 			grid-area: t4;
-            @include lg{
-                text-align: center;
-            }
-			
+			@include lg {
+				text-align: center;
+			}
 		}
 	}
 }

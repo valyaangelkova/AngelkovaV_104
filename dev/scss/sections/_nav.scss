@@ -1,103 +1,60 @@
 //Nav//
 
-#search{
-    background-color: $header;
-    margin-top: 76px;
-    width: 100%;
-   
-    @include md{
-        margin-top: 126px;
-    }
-    @include lg{
-        margin-top: 175px;
-    }
-    @include xl{
-        margin-top: 187px;
-    }
-    
-
-
-    >div {
-        display: grid;
-    grid-template-columns: 20px auto 20px;
-    grid-template-areas: ". header .";
-        grid-area: header;
-        display: flex;
-        height: 7vh;
-        
-        // justify-content: space-between;
-
-        // aside {
-        //     display:block;
-        //     @include md {
-        //         display: none;
-        //     }
-        // }
-
-        section {
-            margin-left: auto;
-            display: flex;
-            align-items: center;
-
-            button {
-                // margin-left: 20px;
-                border:none;
-                color: $onyx;
-                font-family: 'Montserrat', sans-serif;
-                font-weight: 200;
-                font-size: 20px;
-                background-color: $header;
-                
-
-            }
-            button:hover {
-                        
-                color: $aperol;
-                cursor: pointer;
-            }
-            #fr{
-                border-right: 1px solid $onyx;
-                cursor: pointer;
-                button:hover {
-                        
-                    color: $aperol;
-                    cursor: pointer;
-                }
-
-               
-            }
-
-            // #burger {
-            //     display: block;
-
-            //     @include md {
-            //         display: none;
-            //     }
-            // }
-
-            #mg {
-                display: none;
-
-
-                @include md {
-                    cursor: pointer;
-                    
-                    display: block;
-                    color: $onyx;
-                    button:hover {
-                        
-                        color: $aperol;
-                        cursor: pointer;
-                    }
-                    
-                    }
-        
-                }
-            }
-
-            
-        }
-
-
-    }
-
+#search {
+	background-color: $header;
+	margin-top: 76px;
+	width: 100%;
+	@include md {
+		margin-top: 126px;
+	}
+	@include lg {
+		margin-top: 175px;
+	}
+	@include xl {
+		margin-top: 187px;
+	}
+	>div {
+		display: flex;
+		grid-area: header;
+		grid-template-areas: ". header .";
+		grid-template-columns: 20px auto 20px;
+		height: 7vh;
+		section {
+			align-items: center;
+			display: flex;
+			margin-left: auto;
+			button {
+				background-color: $header;
+				border: none;
+				color: $onyx;
+				font-family: 'Montserrat', sans-serif;
+				font-size: 20px;
+				font-weight: 200;
+			}
+			button:hover {
+				color: $aperol;
+				cursor: pointer;
+			}
+			#fr {
+				border-right: 1px solid $onyx;
+				cursor: pointer;
+				button:hover {
+					color: $aperol;
+					cursor: pointer;
+				}
+			}
+			#mg {
+				display: none;
+				@include md {
+					color: $onyx;
+					cursor: pointer;
+					display: block;
+					button:hover {
+						color: $aperol;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+}

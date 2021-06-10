@@ -1,106 +1,90 @@
 //Who We Are//
 
-#whoweare{
-    margin-bottom: 80px;
-    display: grid;
-    grid-template-columns: 24px auto 24px;
-    // grid-template-rows: repeat(3 auto);
-    grid-template-areas:". who .";
-    @include md{
-        grid-template-columns: 91px auto 91px;
-        margin-bottom: 98px;
-
-    }
-    @include lg{
-        grid-template-columns: 242px auto 242px;
-        margin-bottom: 112px;
-
-    }
-    @include xl{
-        grid-template-columns: 292px auto 292px;
-        margin-bottom: 128px;
-
-    }
-    >div{grid-area: who;
-
-    }
-    
-   
-    h1{
-       
-        display: flex;
-        align-content: center;
-justify-content: center;
-margin-top: 80px;
-margin-bottom: 24px;
-@include md{
-
-    margin-top: 98px;
-    margin-bottom: 32px;
-}
-@include lg{
-
-    margin-top: 112px;
-    margin-bottom: 48px;
-}
-@include xl{
-
-    margin-top: 48px;
-    // margin-bottom: 24px;
-}
-    }
-    article{
-
-    display: grid;
-    grid-template-areas: " pt1 pt1"
-    "pt2 pt2";
-    grid-template-columns: repeat(2 1fr);
-    @include xl {
-        grid-template-areas: " pt1 pt2"
-        ;
-        gap: 40px;
-
-    }
-    color: $aperol;
-    font-family: sans-serif;
-    font-weight: 400;
-    font-size: rem-calc(21);
-    line-height: 29px;
-    #pt1{
-        text-align: justify;
-        text-justify: inter-word;
-        grid-area: pt1;
-        
-
-    }
-#pt2{
-    text-align: justify;
-    text-justify: inter-word;
-    display:none;
-    @include md {
-        display:block;
-        grid-area: pt2;
-
-    }
-}
-}
-button{
-    display: flex;
-    margin-left: auto;
-    margin-top: 12px;
-    @include md{
-        margin-top: 32px;
-
-    }
-    color: white;
-    background-color: $aperol;
-    border-radius: 0;
-    border: none;
-    font-family: sans-serif;
-    font-size: rem-calc(19);
-    padding: 10px 22px;
-}
-button:hover{
-    color:$onyx;
-}
+#whoweare {
+	// grid-template-rows: repeat(3 auto);
+	display: grid;
+	grid-template-areas: ". who .";
+	grid-template-columns: 24px auto 24px;
+	margin-bottom: 80px;
+	@include md {
+		grid-template-columns: 91px auto 91px;
+		margin-bottom: 98px;
+	}
+	@include lg {
+		grid-template-columns: 242px auto 242px;
+		margin-bottom: 112px;
+	}
+	@include xl {
+		grid-template-columns: 292px auto 292px;
+		margin-bottom: 128px;
+	}
+	>div {
+		grid-area: who;
+	}
+	h1 {
+		align-content: center;
+		display: flex;
+		justify-content: center;
+		margin-bottom: 24px;
+		margin-top: 80px;
+		@include md {
+			margin-bottom: 32px;
+			margin-top: 98px;
+		}
+		@include lg {
+			margin-bottom: 48px;
+			margin-top: 112px;
+		}
+		@include xl {
+			// margin-bottom: 24px;
+			margin-top: 48px;
+		}
+	}
+	article {
+		color: $aperol;
+		display: grid;
+		font-family: sans-serif;
+		font-size: rem-calc(21);
+		font-weight: 400;
+		grid-template-areas: " pt1 pt1"
+            "pt2 pt2";
+		grid-template-columns: repeat(2 1fr);
+		line-height: 29px;
+		@include xl {
+			gap: 40px;
+			grid-template-areas: " pt1 pt2";
+		}
+		#pt1 {
+			grid-area: pt1;
+			text-align: justify;
+			text-justify: inter-word;
+		}
+		#pt2 {
+			display: none;
+			text-align: justify;
+			text-justify: inter-word;
+			@include md {
+				display: block;
+				grid-area: pt2;
+			}
+		}
+	}
+	button {
+		background-color: $aperol;
+		border: none;
+		border-radius: 0;
+		color: white;
+		display: flex;
+		font-family: sans-serif;
+		font-size: rem-calc(19);
+		margin-left: auto;
+		margin-top: 12px;
+		padding: 10px 22px;
+		@include md {
+			margin-top: 32px;
+		}
+	}
+	button:hover {
+		color: $onyx;
+	}
 }
