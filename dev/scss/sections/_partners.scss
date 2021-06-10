@@ -37,8 +37,19 @@
                 color: $onyx;
             }
         }
+        @include md{
+            #a1{
+                display: flex;
+                margin-right: auto;
+            }
+            #a3{
+                display: flex;
+                margin-left: auto;
+            }
+        }
         @include lg{
             display: none;
+            
         }
     }
        

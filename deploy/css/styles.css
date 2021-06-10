@@ -249,7 +249,7 @@ footer > div {
 }
 footer aside img {
   margin-top: 12px;
-  width: 164px;
+  width: 140px;
 }
 @media (min-width: 768px) {
   footer aside img {
@@ -287,9 +287,11 @@ footer article ul li a:visited:active {
   color: #E64415;
 }
 footer article div p {
+  width: 100%;
+  text-align: right;
   font-family: Montserrat, sans-serif;
   font-weight: 200;
-  font-size: 1rem;
+  font-size: 0.8125rem;
   margin: 5px 0;
 }
 footer article div address {
@@ -627,6 +629,16 @@ footer article div a:visited:active {
 #partners ul .arrows a:visited:active {
   color: #1A171B;
 }
+@media (min-width: 768px) {
+  #partners ul .arrows #a1 {
+    display: flex;
+    margin-right: auto;
+  }
+  #partners ul .arrows #a3 {
+    display: flex;
+    margin-left: auto;
+  }
+}
 @media (min-width: 1024px) {
   #partners ul .arrows {
     display: none;
@@ -789,6 +801,8 @@ footer article div a:visited:active {
   border-radius: 4px;
   text-align: center;
   border-right: none;
+  border-top: none;
+  border-bottom: none;
 }
 @media (min-width: 768px) {
   #season2021 > div #season #input {
@@ -954,6 +968,7 @@ footer article div a:visited:active {
 
 #tickets > div {
   background-color: #1A171B;
+  padding-bottom: 40px;
 }
 @media (min-width: 768px) {
   #tickets > div {
@@ -1014,7 +1029,7 @@ footer article div a:visited:active {
   font-weight: 900;
   height: 54px;
   margin: 14px 0;
-  width: 170px;
+  width: 200px;
 }
 #tickets aside ul button:hover {
   background-color: #E64415;
